@@ -1,0 +1,17 @@
+{
+  "name": "The Braid Map",
+  "short_name": "Braid Map",
+  "description": "50 braid styles, step by step: your guide and your bonuses",
+  "lang": "en-US",
+  "display": "standalone",
+  "orientation": "portrait",
+  "start_url": "/",
+  "scope": "/",
+  "background_color": "#FBF7F1",
+  "theme_color": "#3A1F14",
+  "icons": [
+    { "src": "/assets/icon-bm-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/assets/icon-bm-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/assets/icon-bm-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

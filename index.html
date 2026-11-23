@@ -1,0 +1,1048 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>The Braid Map · Members</title>
+<meta name="description" content="Your Braid Map: 50 braid styles, step by step, plus your bonuses.">
+<meta name="theme-color" content="#3A1F14">
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/assets/icon-bm-192.png">
+<link rel="apple-touch-icon" href="/assets/icon-bm-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Braid Map">
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/inter-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/newsreader-latin.woff2" crossorigin>
+
+<!-- ============================================================
+     MEMBERS APP — The Braid Map: 50 Braid Styles, Step by Step (166 pages) + 6 bonuses
+     MODELO escrito à mão: apps/braidmap-membros/referencia/modelo.html
+     O index.html é GERADO por scripts/braid-app-montar.cjs (não edite o index.html à mão).
+     Login: QUALQUER e-mail com formato válido entra (sem gateway, sem Supabase).
+     Favoritos e a página onde parou ficam no aparelho (localStorage), por e-mail.
+     ============================================================ -->
+<style>
+  @font-face{font-family:"Inter";font-style:normal;font-weight:400 800;font-display:swap;src:url(/assets/fonts/inter-latin.woff2) format("woff2")}
+  @font-face{font-family:"Newsreader";font-style:normal;font-weight:500 700;font-display:swap;src:url(/assets/fonts/newsreader-latin.woff2) format("woff2")}
+  @font-face{font-family:"Newsreader";font-style:italic;font-weight:500 600;font-display:swap;src:url(/assets/fonts/newsreader-italic-latin.woff2) format("woff2")}
+  :root{
+    /* a identidade do guia e da página de vendas (thebraidmap.vercel.app): chocolate, terracota e mostarda sobre creme */
+    --choco:#3A1F14; --choco-2:#4F2B1B; --choco-esc:#24130C;
+    --terra:#B4502A; --terra-esc:#8F3D1E; --terra-nevoa:#F5E3D7;
+    --mostarda:#D9A23A; --mostarda-esc:#9C6F1A; --mostarda-nevoa:#FBF0D9;
+    --creme:#FBF7F1; --papel:#F3EBDF; --branco:#FFFFFF;
+    --linha:#E6DACA; --linha-2:#D5C4AE;
+    --tinta:#1F1610; --texto:#3A2E25; --mudo:#75665A;
+    --verde:#1E6A46; --verde-nevoa:#E6F1EA;
+    --serif:"Newsreader",Georgia,"Times New Roman",serif;
+    --sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    --sombra:0 1px 2px rgba(58,31,20,.06),0 6px 18px -10px rgba(58,31,20,.28);
+    --topo:58px; --barra:64px;
+    --seg-b:env(safe-area-inset-bottom,0px);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%}
+  body{font-family:var(--sans);font-size:16px;line-height:1.55;color:var(--texto);background:var(--creme);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  img{max-width:100%;display:block}
+  a{color:var(--terra-esc)}
+  b,strong{color:var(--tinta);font-weight:700}
+  button{font:inherit;color:inherit;cursor:pointer}
+  [hidden]{display:none!important}
+  svg{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+  h1,h2,h3{font-family:var(--serif);color:var(--tinta);font-weight:600;line-height:1.12;letter-spacing:-.01em}
+  .kicker{display:block;font:700 11.5px/1.2 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--terra)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:8px;background:var(--choco);color:#fff;
+    font:700 15.5px/1.2 var(--sans);padding:14px 18px;text-decoration:none;box-shadow:inset 0 -2px 0 rgba(0,0,0,.25);transition:background .15s}
+  .btn:hover{background:var(--choco-2)}
+  .btn svg{width:18px;height:18px}
+  .btn.terra{background:var(--terra)} .btn.terra:hover{background:var(--terra-esc)}
+  .btn.claro{background:var(--branco);color:var(--choco);border:1.5px solid var(--linha-2);box-shadow:none}
+  .btn.claro:hover{border-color:var(--choco)}
+  .btn.full{width:100%}
+  .btn.pq{padding:10px 13px;font-size:14px}
+  .pilula{display:inline-flex;align-items:center;gap:5px;font:700 11px/1 var(--sans);letter-spacing:.08em;text-transform:uppercase;border-radius:99px;padding:6px 9px}
+  .pilula.ok{background:var(--verde-nevoa);color:var(--verde)}
+  .pilula.breve{background:var(--mostarda-nevoa);color:var(--mostarda-esc)}
+  .pilula svg{width:13px;height:13px;stroke-width:2.4}
+
+  /* ═════════ CARREGANDO ═════════ */
+  .carregando{position:fixed;inset:0;display:grid;place-items:center;background:var(--creme)}
+  .carregando img{width:76px;height:76px;border-radius:18px;animation:pulsa 1.2s ease-in-out infinite}
+  @keyframes pulsa{50%{transform:scale(.92);opacity:.7}}
+
+  /* ═════════ LOGIN ═════════ */
+  .login{min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;background:var(--creme)}
+  .login-fotos{position:relative;height:232px;background:linear-gradient(180deg,var(--papel),var(--creme));overflow:hidden;display:flex;justify-content:center;align-items:flex-end;padding-bottom:14px}
+  .login-fotos img{width:132px;height:156px;object-fit:cover;border:5px solid #fff;border-radius:6px;box-shadow:0 14px 30px -14px rgba(36,19,12,.55)}
+  .login-fotos img:nth-child(1){transform:rotate(-7deg) translate(18px,10px)}
+  .login-fotos img:nth-child(2){position:relative;z-index:2;width:146px;height:178px}
+  .login-fotos img:nth-child(3){transform:rotate(7deg) translate(-18px,10px)}
+  .login-caixa{width:100%;max-width:430px;margin:0 auto;padding:22px 20px 34px;text-align:center}
+  .marca{display:inline-flex;align-items:center;gap:10px;text-decoration:none}
+  .marca img{width:40px;height:40px;border-radius:10px}
+  .marca span{font:600 21px/1 var(--serif);color:var(--choco)}
+  .login h1{font-size:clamp(30px,8vw,38px);margin:18px 0 8px}
+  .login h1 em{font-style:italic;color:var(--terra)}
+  .login .sub{color:var(--mudo);font-size:15.5px}
+  .login form{text-align:left;margin-top:22px}
+  .rotulo{display:block;font-weight:700;font-size:14px;color:var(--tinta);margin-bottom:7px}
+  .campo{display:flex;align-items:center;gap:10px;background:#fff;border:1.5px solid var(--linha-2);border-radius:8px;padding:0 14px;transition:border-color .15s}
+  .campo:focus-within{border-color:var(--choco)}
+  .campo svg{color:var(--mudo)}
+  .campo input{flex:1;min-width:0;border:0;outline:0;background:none;font:inherit;font-size:16.5px;padding:14px 0;color:var(--tinta)}
+  .login .btn{margin-top:12px}
+  .aviso{margin-top:12px;background:var(--terra-nevoa);color:var(--terra-esc);border-radius:8px;padding:11px 13px;font-size:14.5px}
+  .selos{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 18px;margin-top:18px;font-size:13.5px;color:var(--mudo)}
+  .selos span{display:inline-flex;align-items:center;gap:6px}
+  .selos svg{width:16px;height:16px;color:var(--verde)}
+  .nota-login{margin-top:20px;padding-top:16px;border-top:1px solid var(--linha);font-size:13.5px;color:var(--mudo)}
+
+  /* ═════════ APP: topo, abas ═════════ */
+  .topo{position:sticky;top:0;z-index:20;height:var(--topo);display:flex;align-items:center;gap:12px;padding:0 16px;background:rgba(251,247,241,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--linha)}
+  .topo .marca img{width:34px;height:34px;border-radius:9px}
+  .topo .marca span{font-size:19px}
+  .topo .abas{display:none}
+  .conta{margin-left:auto;width:38px;height:38px;border-radius:99px;border:1.5px solid var(--linha-2);background:var(--choco);color:#fff;font:700 15px/1 var(--sans);display:grid;place-items:center}
+  .barra{position:fixed;left:0;right:0;bottom:0;z-index:20;display:grid;grid-template-columns:repeat(5,1fr);background:#fff;border-top:1px solid var(--linha);padding:6px 6px calc(6px + var(--seg-b))}
+  .barra a{display:flex;flex-direction:column;align-items:center;gap:3px;text-decoration:none;color:var(--mudo);font-size:11.5px;font-weight:600;padding:5px 0;border-radius:8px}
+  .barra a svg{width:22px;height:22px}
+  .barra a.on{color:var(--choco)}
+  .barra a.on svg{color:var(--terra)}
+  .conteudo{max-width:760px;margin:0 auto;padding:20px 16px calc(var(--barra) + 40px + var(--seg-b))}
+  @media(min-width:900px){
+    .barra{display:none}
+    .topo{height:64px;padding:0 28px}
+    .topo .abas{display:flex;gap:4px;margin-left:28px}
+    .topo .abas a{display:flex;align-items:center;gap:7px;text-decoration:none;color:var(--mudo);font-weight:600;font-size:14.5px;padding:9px 13px;border-radius:8px}
+    .topo .abas a.on{background:var(--papel);color:var(--choco)}
+    .topo .abas svg{width:18px;height:18px}
+    .conteudo{padding-bottom:60px;padding-top:30px}
+  }
+  .tela-cab{margin-bottom:18px}
+  .tela-cab h1{font-size:clamp(30px,7.4vw,40px);margin-top:6px;padding-left:14px;border-left:5px solid var(--mostarda)}
+  .tela-cab p{color:var(--mudo);margin-top:8px;font-size:15.5px}
+  .sec{margin-top:34px}
+  .sec-tit{display:flex;align-items:flex-end;justify-content:space-between;gap:10px;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--linha)}
+  .sec-tit h2{font-size:25px}
+  .sec-tit .cont{font-size:13px;color:var(--mudo);font-weight:600;white-space:nowrap}
+  .rodape{margin-top:40px;padding-top:18px;border-top:1px solid var(--linha);font-size:12.5px;color:var(--mudo);text-align:center;line-height:1.6}
+
+  /* ═════════ HOME ═════════ */
+  .ola small{font-size:14px;color:var(--mudo);font-weight:600}
+  .ola h1{font-size:clamp(30px,7.6vw,40px);margin-top:2px}
+  .ola h1 em{font-style:italic;color:var(--terra)}
+  .seguir{display:flex;align-items:center;gap:14px;margin-top:16px;background:var(--choco);color:#EFE3D6;border-radius:10px;padding:12px;text-decoration:none;box-shadow:var(--sombra);position:relative;overflow:hidden}
+  .seguir::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--mostarda)}
+  .seguir img{width:74px;height:104px;object-fit:cover;border-radius:4px;flex:none;margin-left:4px;box-shadow:0 6px 14px -6px rgba(0,0,0,.6)}
+  .seguir .t{flex:1;min-width:0}
+  .seguir small{font:700 11px/1.2 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--mostarda)}
+  .seguir b{display:block;color:#fff;font:600 21px/1.15 var(--serif);margin:4px 0 4px}
+  .seguir span{font-size:13.5px;color:#D8C8B8;display:block}
+  .seguir .prog{height:4px;background:rgba(255,255,255,.16);border-radius:9px;margin-top:9px;overflow:hidden}
+  .seguir .prog i{display:block;height:100%;background:var(--mostarda)}
+  .seguir .ir{width:42px;height:42px;border-radius:99px;background:var(--terra);display:grid;place-items:center;flex:none;color:#fff}
+  .faixa-app{display:flex;align-items:center;gap:12px;margin-top:12px;background:#fff;border:1px solid var(--linha);border-radius:10px;padding:11px 12px;text-decoration:none;color:var(--texto);font-size:14px}
+  .faixa-app img{width:38px;height:38px;border-radius:9px}
+  .faixa-app b{display:block;font-size:14.5px}
+  .faixa-app .seta{margin-left:auto;color:var(--mudo)}
+  .passos{display:flex;flex-direction:column;gap:12px;counter-reset:p}
+  .passo{background:#fff;border:1px solid var(--linha);border-radius:10px;padding:16px;box-shadow:var(--sombra)}
+  .passo-cab{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+  .passo-cab .n{width:34px;height:34px;flex:none;border-radius:6px;background:var(--mostarda);color:var(--choco-esc);font:700 18px/1 var(--serif);display:grid;place-items:center}
+  .passo-cab h3{font-size:21px}
+  .passo p{font-size:15px;color:var(--texto)}
+  .passo p+p{margin-top:8px}
+  .passo .acoes{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+  .mapa-guia{display:grid;grid-template-columns:auto 1fr;border:1px solid var(--linha-2);border-radius:8px;overflow:hidden;margin:6px 0 10px;font-size:14px}
+  .mapa-guia > *{padding:9px 11px;border-top:1px solid var(--linha)}
+  .mapa-guia > :nth-child(-n+2){border-top:0}
+  .mapa-guia .pg{background:var(--choco);color:#fff;font-weight:700;font-size:12.5px;white-space:nowrap;display:flex;align-items:center;border-top-color:rgba(255,255,255,.12)}
+  .mapa-guia a{color:var(--tinta);text-decoration:none}
+  .mapa-guia a b{text-decoration:underline;text-decoration-color:var(--linha-2);text-underline-offset:3px}
+  .mapa-guia small{display:block;color:var(--mudo);font-size:13px;margin-top:1px}
+  .tres{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:6px}
+  .tres a{display:block;text-decoration:none;color:var(--tinta);text-align:center;font-size:12px;font-weight:600}
+  .tres img{width:100%;height:auto;aspect-ratio:1055/1491;object-fit:cover;border:1px solid var(--linha-2);border-radius:4px;margin-bottom:5px;background:var(--papel)}
+  .lista-curta{margin:6px 0 0 18px;font-size:15px}
+  .lista-curta li+li{margin-top:4px}
+  .bonus-grade{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+  @media(min-width:640px){.bonus-grade{grid-template-columns:repeat(3,1fr)}}
+  .b-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--linha);border-radius:10px;overflow:hidden;text-decoration:none;color:inherit;box-shadow:var(--sombra)}
+  .b-card .capa{position:relative;aspect-ratio:4/3;background:var(--papel)}
+  .b-card .capa img{width:100%;height:100%;object-fit:cover}
+  .b-card .capa .pilula{position:absolute;left:8px;top:8px}
+  .b-card.breve .capa img{filter:saturate(.55) brightness(.9)}
+  .b-card .t{padding:10px 11px 12px}
+  .b-card small{font:700 10.5px/1.2 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--terra)}
+  .b-card b{display:block;font:600 17px/1.15 var(--serif);margin-top:4px;color:var(--tinta)}
+
+  /* ═════════ GUIDE ═════════ */
+  .livro{display:grid;grid-template-columns:118px 1fr;gap:14px;background:#fff;border:1px solid var(--linha);border-radius:10px;padding:12px;box-shadow:var(--sombra)}
+  .livro > img{width:118px;height:167px;object-fit:cover;border-radius:4px;box-shadow:0 8px 18px -10px rgba(36,19,12,.6)}
+  .livro h2{font-size:21px;margin:6px 0 4px}
+  .livro p{font-size:13.5px;color:var(--mudo)}
+  .livro .acoes{grid-column:1/-1;display:grid;grid-template-columns:1fr auto;gap:8px}
+  .busca{position:sticky;top:calc(var(--topo) + 8px);z-index:5;margin-top:16px}
+  @media(min-width:900px){.busca{top:72px}}
+  .busca .campo{box-shadow:0 6px 16px -12px rgba(36,19,12,.5)}
+  .busca .campo input{padding:12px 0}
+  input[type=search]::-webkit-search-cancel-button{-webkit-appearance:none;display:none}
+  .busca .limpar{border:0;background:var(--papel);width:28px;height:28px;border-radius:99px;font-size:18px;line-height:1;color:var(--mudo)}
+  .chips{display:flex;gap:7px;overflow-x:auto;padding:12px 2px 4px;margin:0 -16px;padding-left:16px;padding-right:16px;scrollbar-width:none}
+  .chips::-webkit-scrollbar{display:none}
+  .chip{flex:none;border:1.5px solid var(--linha-2);background:#fff;border-radius:99px;padding:7px 13px;font-size:13.5px;font-weight:600;color:var(--texto);display:inline-flex;align-items:center;gap:5px}
+  .chip svg{width:15px;height:15px}
+  .chip.on{background:var(--choco);border-color:var(--choco);color:#fff}
+  .grupo{margin-top:22px}
+  .grupo-tit{display:flex;align-items:center;gap:10px;background:var(--choco);color:#fff;padding:7px 11px;border-radius:4px;font:700 12px/1.2 var(--sans);letter-spacing:.1em;text-transform:uppercase}
+  .grupo-tit span{margin-left:auto;font-weight:600;letter-spacing:.04em;color:#D8C8B8;text-transform:none;font-size:12.5px}
+  .linhas{background:#fff;border:1px solid var(--linha);border-top:0;border-radius:0 0 8px 8px}
+  .linha{display:flex;align-items:flex-start;gap:10px;padding:11px 8px 11px 11px;border-top:1px solid var(--linha)}
+  .linha:first-child{border-top:0}
+  .linha .nn{width:36px;height:36px;flex:none;border-radius:5px;background:var(--papel);color:var(--choco);font:700 15px/1 var(--serif);display:grid;place-items:center;margin-top:1px}
+  .linha .nn.prep{background:var(--mostarda-nevoa);color:var(--mostarda-esc)}
+  .linha .t{flex:1;min-width:0}
+  .linha .abre{display:block;text-decoration:none;color:inherit}
+  .linha .abre b{display:block;font-size:15.5px;line-height:1.25}
+  .linha .abre small{display:block;font-size:12.5px;color:var(--mudo);margin-top:2px}
+  .linha .partes{display:flex;flex-wrap:wrap;gap:5px;margin-top:7px}
+  .linha .partes a{font-size:12px;font-weight:600;color:var(--choco);text-decoration:none;border:1px solid var(--linha-2);border-radius:4px;padding:3px 7px;background:var(--creme)}
+  .linha .partes a:hover{border-color:var(--choco)}
+  .nivel{display:inline-block;font-weight:700;color:var(--terra)}
+  .stella{width:38px;height:38px;flex:none;display:grid;place-items:center;border:0;background:none;border-radius:8px;color:#B5A594}
+  .stella:hover{background:var(--papel)}
+  .stella.on{color:var(--mostarda)}
+  .stella.on svg{fill:currentColor}
+  .vazio{padding:18px 14px;text-align:center;color:var(--mudo);font-size:14.5px;background:#fff;border:1.5px dashed var(--linha-2);border-radius:8px;margin-top:14px}
+
+  /* ═════════ BONUS ═════════ */
+  .voltar{display:inline-flex;align-items:center;gap:4px;color:var(--choco);font-weight:700;font-size:14px;text-decoration:none;margin-bottom:14px}
+  .voltar svg{width:18px;height:18px}
+  .b-cab{display:grid;grid-template-columns:128px 1fr;gap:16px;align-items:center}
+  .b-cab img{width:128px;height:auto;border-radius:4px;box-shadow:0 12px 24px -12px rgba(36,19,12,.6)}
+  .b-cab h1{font-size:clamp(26px,6.4vw,34px);margin:6px 0 8px}
+  .b-cab p{font-size:14.5px;color:var(--mudo)}
+  .b-acoes{display:grid;grid-template-columns:1fr;gap:8px;margin-top:18px}
+  @media(min-width:520px){.b-acoes{grid-template-columns:1fr 1fr}}
+  .caixa-breve{display:flex;gap:12px;margin-top:18px;background:var(--mostarda-nevoa);border:1.5px solid var(--mostarda);border-radius:10px;padding:15px}
+  .caixa-breve svg{width:24px;height:24px;color:var(--mostarda-esc)}
+  .caixa-breve b{display:block;font-size:16px;margin-bottom:3px}
+  .caixa-breve p{font-size:14.5px}
+  .b-nota{margin-top:16px;font-size:13.5px;color:var(--mudo)}
+
+  /* ═════════ SUPPORT ═════════ */
+  .contato{margin-top:28px;background:var(--choco);color:#E9DCCD;border-radius:10px;padding:18px 16px;box-shadow:var(--sombra)}
+  .contato h2{color:#fff;font-size:24px}
+  .contato p{font-size:14.5px;margin:6px 0 12px}
+  .contato label{display:block;font-size:13px;font-weight:700;color:#fff;margin-bottom:6px}
+  .contato textarea{width:100%;min-height:92px;border:0;border-radius:8px;padding:12px;font:inherit;font-size:16px;color:var(--tinta);resize:vertical;outline:2px solid transparent}
+  .contato textarea:focus{outline-color:var(--mostarda)}
+  .contato .btn{margin-top:10px;background:var(--terra)}
+  .contato .btn:hover{background:var(--terra-esc)}
+  .contato .alt{font-size:13px;margin:10px 0 0;color:#CDBBA8}
+  .contato .alt a{color:#fff}
+  .faq-grupo{margin-top:26px}
+  .faq-grupo h3{font:700 12px/1.2 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--terra);margin-bottom:8px}
+  .faq{background:#fff;border:1px solid var(--linha);border-radius:10px;overflow:hidden}
+  .faq details{border-top:1px solid var(--linha)}
+  .faq details:first-child{border-top:0}
+  .faq summary{list-style:none;cursor:pointer;display:flex;align-items:flex-start;gap:12px;padding:14px 14px;font-weight:700;font-size:15.5px;color:var(--tinta);line-height:1.35}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";margin-left:auto;flex:none;width:24px;height:24px;border-radius:5px;background:var(--papel);display:grid;place-items:center;font-weight:700;color:var(--choco)}
+  .faq details[open] summary::after{content:"−";background:var(--choco);color:#fff}
+  .faq .r{padding:0 14px 16px;font-size:15px;color:var(--texto)}
+  .faq .r p+p,.faq .r p+ul,.faq .r ul+p{margin-top:8px}
+  .faq .r ul{margin-left:18px}
+  .faq .r li+li{margin-top:5px}
+  .faq .r a.pg{font-weight:700;color:var(--terra-esc);text-decoration:underline;text-underline-offset:2px;white-space:nowrap}
+  .faq details:target{outline:2px solid var(--mostarda);outline-offset:-2px}
+
+  /* ═════════ APP (instalar) ═════════ */
+  .app-hero{display:flex;gap:14px;align-items:center;background:#fff;border:1px solid var(--linha);border-radius:10px;padding:14px;box-shadow:var(--sombra)}
+  .app-hero img{width:66px;height:66px;border-radius:15px;flex:none}
+  .app-hero b{font:600 20px/1.15 var(--serif)}
+  .app-hero p{font-size:14px;color:var(--mudo);margin-top:3px}
+  .instalado{display:flex;gap:10px;align-items:center;margin-top:12px;background:var(--verde-nevoa);color:var(--verde);border-radius:8px;padding:12px 14px;font-weight:600;font-size:14.5px}
+  .alerta{margin-top:12px;background:var(--terra-nevoa);border-radius:8px;padding:12px 14px;font-size:14.5px;color:var(--terra-esc)}
+  .alerta b{color:var(--terra-esc)}
+  .so{background:#fff;border:1px solid var(--linha);border-radius:10px;padding:16px;margin-top:14px}
+  .so h3{display:flex;align-items:center;gap:9px;font-size:20px}
+  .so h3 small{font:600 12px/1 var(--sans);color:var(--mudo);margin-left:auto}
+  .so ol{list-style:none;counter-reset:s;margin-top:12px;display:flex;flex-direction:column;gap:10px}
+  .so li{counter-increment:s;display:flex;gap:11px;font-size:15px;align-items:flex-start}
+  .so li::before{content:counter(s);width:26px;height:26px;flex:none;border-radius:5px;background:var(--choco);color:#fff;font:700 14px/1 var(--sans);display:grid;place-items:center;margin-top:-1px}
+  .so li svg{display:inline-block;vertical-align:-4px;width:18px;height:18px;color:var(--choco)}
+  .so.destaque{border:2px solid var(--choco)}
+
+  /* ═════════ LEITOR ═════════ */
+  .leitor{position:fixed;inset:0;z-index:40;background:#E9E1D6;display:flex;flex-direction:column}
+  .l-topo{display:flex;align-items:center;gap:6px;height:58px;padding:0 8px;background:#fff;border-bottom:1px solid var(--linha);flex:none}
+  .l-voltar{display:flex;align-items:center;border:0;background:none;padding:8px 4px;border-radius:8px;color:var(--choco)}
+  .l-voltar svg{width:24px;height:24px}
+  .l-tit{flex:1;min-width:0;line-height:1.2}
+  .l-tit b{display:block;font:600 16.5px/1.2 var(--serif);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .l-tit span{display:block;font-size:12px;color:var(--mudo);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .l-btn{height:40px;min-width:40px;border:1.5px solid var(--linha);background:#fff;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:0 9px;color:var(--choco);font-size:13px;font-weight:700}
+  .l-btn .t{display:none}
+  @media(min-width:640px){.l-btn .t{display:inline}}
+  .l-btn.on{background:var(--choco);border-color:var(--choco);color:#fff}
+  .l-btn.fav.on{background:var(--mostarda-nevoa);border-color:var(--mostarda);color:var(--mostarda-esc)}
+  .l-btn.fav.on svg{fill:currentColor}
+  .l-rolagem{flex:1;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
+  .l-rolagem.z{overflow-x:auto}
+  .l-paginas{width:100%;max-width:840px;margin:0 auto;padding:8px 0 40px;display:flex;flex-direction:column;gap:8px}
+  .l-paginas.z{width:210%;max-width:none}
+  .pg-l{position:relative;aspect-ratio:1055/1491;background:#F7F1E8 center/38px no-repeat;box-shadow:0 2px 10px -4px rgba(36,19,12,.35);touch-action:manipulation}
+  .pg-l img{width:100%;height:100%;object-fit:contain;opacity:0;transition:opacity .25s}
+  .pg-l img.ok{opacity:1}
+  .pg-l .num{position:absolute;right:8px;top:8px;background:rgba(36,19,12,.72);color:#fff;font-size:11px;font-weight:700;border-radius:4px;padding:3px 6px}
+  .l-dica{position:absolute;left:50%;bottom:calc(18px + var(--seg-b));transform:translateX(-50%);background:rgba(36,19,12,.88);color:#fff;font-size:13px;font-weight:600;border-radius:99px;padding:8px 14px;pointer-events:none;transition:opacity .4s;white-space:nowrap}
+  .gaveta-fundo{position:fixed;inset:0;z-index:45;background:rgba(36,19,12,.45)}
+  .gaveta{position:fixed;top:0;right:0;bottom:0;z-index:46;width:min(420px,92vw);background:var(--creme);display:flex;flex-direction:column;box-shadow:-20px 0 40px -20px rgba(0,0,0,.4)}
+  .gaveta .cab{display:flex;align-items:center;gap:8px;padding:12px 12px 10px 16px;border-bottom:1px solid var(--linha);background:#fff}
+  .gaveta .cab b{font:600 20px/1.1 var(--serif);flex:1}
+  .fechar{width:38px;height:38px;border:0;border-radius:8px;background:var(--papel);display:grid;place-items:center;color:var(--choco)}
+  .gaveta .busca-g{padding:10px 12px;background:#fff;border-bottom:1px solid var(--linha)}
+  .gaveta .busca-g .campo input{padding:10px 0;font-size:16px}
+  .gaveta .corpo{flex:1;overflow-y:auto;padding:4px 0 30px}
+  .g-tit{font:700 11.5px/1.2 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--terra);padding:16px 16px 6px}
+  .g-item{display:flex;align-items:center;gap:10px;width:100%;border:0;background:none;text-align:left;padding:9px 16px;font-size:14.5px;color:var(--texto)}
+  .g-item:hover{background:var(--papel)}
+  .g-item .nn{width:30px;flex:none;font:700 14px/1 var(--serif);color:var(--choco)}
+  .g-item .nome{flex:1;min-width:0}
+  .g-item small{font-size:12px;color:var(--mudo);white-space:nowrap}
+  .g-item.atual{background:var(--mostarda-nevoa);font-weight:700}
+  .g-item .fav-mini{color:var(--mostarda);width:15px;height:15px;fill:currentColor}
+
+  /* ═════════ MODAL, MENU, TOAST ═════════ */
+  .modal-fundo{position:fixed;inset:0;z-index:60;background:rgba(36,19,12,.5);display:flex;align-items:flex-end;justify-content:center;padding:0}
+  @media(min-width:640px){.modal-fundo{align-items:center;padding:20px}}
+  .modal{width:100%;max-width:460px;background:var(--creme);border-radius:14px 14px 0 0;padding:20px 18px calc(22px + var(--seg-b));box-shadow:0 -10px 40px -10px rgba(0,0,0,.4)}
+  @media(min-width:640px){.modal{border-radius:14px}}
+  .modal .cab{display:flex;align-items:flex-start;gap:10px;margin-bottom:8px}
+  .modal h3{font-size:23px;flex:1}
+  .modal p{font-size:14.5px;color:var(--texto)}
+  .modal .acoes{display:grid;gap:8px;margin-top:16px}
+  .modal .mail{font-weight:700;color:var(--tinta);word-break:break-all}
+  .toast{position:fixed;left:50%;bottom:calc(var(--barra) + 18px + var(--seg-b));transform:translate(-50%,20px);z-index:80;background:var(--choco-esc);color:#fff;font-size:14px;font-weight:600;border-radius:99px;padding:10px 16px;opacity:0;pointer-events:none;transition:.25s;max-width:92vw;text-align:center}
+  .toast.on{opacity:1;transform:translate(-50%,0)}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-casa" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M10 21v-6h4v6"/></symbol>
+  <symbol id="i-livro" viewBox="0 0 24 24"><path d="M4 4.5A1.5 1.5 0 0 1 5.5 3H20v15H5.5A1.5 1.5 0 0 0 4 19.5z"/><path d="M4 19.5A1.5 1.5 0 0 0 5.5 21H20v-3"/><path d="M8 7h8M8 10.5h6"/></symbol>
+  <symbol id="i-ajuda" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.2a2.6 2.6 0 0 1 5 .9c0 1.8-2.5 2.2-2.5 3.9"/><path d="M12 17.2h.01"/></symbol>
+  <symbol id="i-cel" viewBox="0 0 24 24"><rect x="6.5" y="2.5" width="11" height="19" rx="2.2"/><path d="M11 18.5h2"/></symbol>
+  <symbol id="i-estrela" viewBox="0 0 24 24"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9Z"/></symbol>
+  <symbol id="i-busca" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></symbol>
+  <symbol id="i-lista" viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M4.5 6h.01M4.5 12h.01M4.5 18h.01"/></symbol>
+  <symbol id="i-pdf" viewBox="0 0 24 24"><path d="M14 3H6.5A1.5 1.5 0 0 0 5 4.5v15A1.5 1.5 0 0 0 6.5 21h11a1.5 1.5 0 0 0 1.5-1.5V8z"/><path d="M14 3v5h5"/><path d="M12 11v6m-2.5-2.5L12 17l2.5-2.5"/></symbol>
+  <symbol id="i-zoom" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2M11 8.5v5M8.5 11h5"/></symbol>
+  <symbol id="i-esq" viewBox="0 0 24 24"><path d="m15 5-7 7 7 7"/></symbol>
+  <symbol id="i-dir" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></symbol>
+  <symbol id="i-ok" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-relogio" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-escudo" viewBox="0 0 24 24"><path d="M12 3 5 6v5.5c0 4.4 3 8 7 9.5 4-1.5 7-5.1 7-9.5V6z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-sair" viewBox="0 0 24 24"><path d="M15 4h3.5A1.5 1.5 0 0 1 20 5.5v13a1.5 1.5 0 0 1-1.5 1.5H15"/><path d="M10 16.5 5.5 12 10 7.5M5.5 12H15"/></symbol>
+  <symbol id="i-compart" viewBox="0 0 24 24"><path d="M12 15V3.5M8 7.5l4-4 4 4"/><path d="M8 11H6.5A1.5 1.5 0 0 0 5 12.5v7A1.5 1.5 0 0 0 6.5 21h11a1.5 1.5 0 0 0 1.5-1.5v-7a1.5 1.5 0 0 0-1.5-1.5H16"/></symbol>
+  <symbol id="i-mais-q" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M12 8.5v7M8.5 12h7"/></symbol>
+  <symbol id="i-pontos" viewBox="0 0 24 24"><path d="M12 5.5h.01M12 12h.01M12 18.5h.01" stroke-width="3"/></symbol>
+  <symbol id="i-presente" viewBox="0 0 24 24"><rect x="3.5" y="8" width="17" height="4" rx="1"/><path d="M5 12v8.5h14V12M12 8v12.5"/><path d="M12 8C10.5 4 6.5 4.5 7.5 7c.4 1 2.5 1 4.5 1Zm0 0c1.5-4 5.5-3.5 4.5-1-.4 1-2.5 1-4.5 1Z"/></symbol>
+  <symbol id="i-copiar" viewBox="0 0 24 24"><rect x="8.5" y="8.5" width="11.5" height="11.5" rx="2"/><path d="M15.5 8.5V5.5A1.5 1.5 0 0 0 14 4H5.5A1.5 1.5 0 0 0 4 5.5V14a1.5 1.5 0 0 0 1.5 1.5h3"/></symbol>
+  <symbol id="i-pc" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M8 20h8M12 16v4"/></symbol>
+</svg>
+
+<div class="carregando" id="v-carregando"><img src="/assets/logo-bm-192.webp" alt="Loading" width="192" height="192"></div>
+
+<!-- ═════════════ LOGIN ═════════════ -->
+<main class="login" id="v-login" hidden>
+  <div class="login-fotos" aria-hidden="true">
+    <img src="/assets/login/l1.webp" alt="" width="400" height="400">
+    <img src="/assets/login/l2.webp" alt="" width="400" height="400">
+    <img src="/assets/login/l3.webp" alt="" width="400" height="400">
+  </div>
+  <div class="login-caixa">
+    <span class="marca"><img src="/assets/logo-bm-192.webp" alt="" width="192" height="192"><span>The Braid Map</span></span>
+    <h1>Welcome to your <em>Braid Map</em></h1>
+    <p class="sub">Enter the email you used at checkout to open your guide and your bonuses.</p>
+    <form id="form-login" novalidate>
+      <label class="rotulo" for="email">Your email</label>
+      <div class="campo">
+        <svg aria-hidden="true"><use href="#i-mail"/></svg>
+        <input id="email" name="email" type="email" inputmode="email" autocomplete="email" autocapitalize="off" spellcheck="false" placeholder="you@example.com" required>
+      </div>
+      <button class="btn full terra" type="submit" id="btn-entrar">Open my guide</button>
+      <div class="aviso" id="erro-login" role="alert" hidden></div>
+    </form>
+    <div class="selos"><span><svg aria-hidden="true"><use href="#i-escudo"/></svg>No password needed</span><span><svg aria-hidden="true"><use href="#i-cel"/></svg>Phone, tablet &amp; computer</span></div>
+    <p class="nota-login">Trouble getting in? Email us at <a href="mailto:support@htguias.com">support@htguias.com</a></p>
+  </div>
+</main>
+
+<!-- ═════════════ APP ═════════════ -->
+<div id="v-app" hidden>
+  <header class="topo">
+    <a class="marca" href="#home"><img src="/assets/logo-bm-192.webp" alt="" width="192" height="192"><span>The Braid Map</span></a>
+    <nav class="abas" aria-label="Sections">
+      <a href="#home" data-aba="home"><svg aria-hidden="true"><use href="#i-casa"/></svg>Home</a>
+      <a href="#guide" data-aba="guide"><svg aria-hidden="true"><use href="#i-livro"/></svg>Guide</a>
+      <a href="#bonuses" data-aba="bonuses"><svg aria-hidden="true"><use href="#i-presente"/></svg>Bonuses</a>
+      <a href="#support" data-aba="support"><svg aria-hidden="true"><use href="#i-ajuda"/></svg>Support</a>
+      <a href="#app" data-aba="app"><svg aria-hidden="true"><use href="#i-cel"/></svg>Get the app</a>
+    </nav>
+    <button class="conta" id="btn-conta" type="button" aria-label="Your account">B</button>
+  </header>
+
+  <main class="conteudo">
+
+    <!-- HOME -->
+    <section class="tela" id="t-home" hidden>
+      <div class="ola"><small id="ola-sub">Welcome</small><h1>Your <em>Braid Map</em></h1></div>
+      <div id="seguir"></div>
+      <a class="faixa-app" id="faixa-app" href="#app" hidden><img src="/assets/icon-bm-192.png" alt="" width="192" height="192"><span><b>Put the guide on your home screen</b>Open it with one tap, like an app.</span><svg class="seta" aria-hidden="true"><use href="#i-dir"/></svg></a>
+
+      <section class="sec">
+        <div class="sec-tit"><h2>How to use your guide</h2><span class="cont">4 quick steps</span></div>
+        <div class="passos">
+          <article class="passo">
+            <div class="passo-cab"><span class="n">1</span><h3>How the guide is laid out</h3></div>
+            <p>166 pages in three parts:</p>
+            <div class="mapa-guia">
+              <span class="pg">p. 2–4</span><a href="#read/guide/2"><b>Start here</b><small>How to use the guide (p. 2) and the <b>All 50 Styles</b> table (p. 3–4): every style with its level, hours and packs.</small></a>
+              <span class="pg">p. 5–16</span><a href="#read/guide/5"><b>Preparation · 12 pages</b><small>Supplies, braid sizes, packs, hair prep, parting, feed-ins, grip, ends, kids, care, take down and the 8 common mistakes.</small></a>
+              <span class="pg">p. 17–166</span><a href="#guide"><b>The 50 styles · 3 pages each</b><small>Level 1 (01–15), Level 2 (16–30) and Level 3 (31–50).</small></a>
+            </div>
+            <p>Every style has the same 3 pages:</p>
+            <div class="tres">
+              <a href="#read/guide/23"><img src="/assets/livros/guide/pag-023.webp" alt="Style Profile page" width="1055" height="1491" loading="lazy">1 · Style Profile</a>
+              <a href="#read/guide/24"><img src="/assets/livros/guide/pag-024.webp" alt="The Map page" width="1055" height="1491" loading="lazy">2 · The Map</a>
+              <a href="#read/guide/25"><img src="/assets/livros/guide/pag-025.webp" alt="Step by Step page" width="1055" height="1491" loading="lazy">3 · Step by Step</a>
+            </div>
+            <ul class="lista-curta">
+              <li><b>Style Profile:</b> the photo, the numbers (braids, packs, length, hours), what you need, who it's for and care.</li>
+              <li><b>The Map:</b> the head from the back and the top, every row with its braid count, and 3 work sections with time.</li>
+              <li><b>Step by Step:</b> 7 photo steps from prep to ends, the finished look, and the most common mistake with its fix.</li>
+            </ul>
+          </article>
+          <article class="passo">
+            <div class="passo-cab"><span class="n">2</span><h3>Where to start</h3></div>
+            <p><b>Read the Preparation once</b>, pages 5–16, start to finish. Every style builds on it.</p>
+            <p><b>Then pick a style by level and time.</b> New to braiding? Start with Level 1: 03 Medium Knotless is the classic first style. Braiding your daughter? Start with 08 or 11. Every Style Profile shows the hours for a beginner.</p>
+            <p>Before the whole head, braid one row at the nape and check it against the map.</p>
+            <div class="acoes"><a class="btn pq" href="#read/guide/5">Read the Preparation</a><a class="btn claro pq" href="#guide/n1">Level 1 styles</a><a class="btn claro pq" href="#guide/h4">Up to 4 hours</a></div>
+          </article>
+          <article class="passo">
+            <div class="passo-cab"><span class="n">3</span><h3>How to print</h3></div>
+            <p>Open the PDF and print on <b>Letter</b> paper with the scale set to <b>“Fit to page”</b>, so nothing gets cut. Color is best for the maps; black &amp; white works too.</p>
+            <p>Print only what you need: each style is 3 pages in a row, and the Guide tab shows the page numbers (Style 03 = pages 23–25).</p>
+            <div class="acoes"><button class="btn pq" type="button" data-pdf="guide">Get the PDF</button><a class="btn claro pq" href="#support/faq-print">Printing help</a></div>
+          </article>
+          <article class="passo">
+            <div class="passo-cab"><span class="n">4</span><h3>Put it on your phone</h3></div>
+            <p>Add The Braid Map to your home screen and open it with one tap, even in the middle of a braid. <b>iPhone:</b> Safari › Share › Add to Home Screen. <b>Android:</b> Chrome › menu ⋮ › Install app.</p>
+            <div class="acoes"><a class="btn pq" href="#app">See the steps</a></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="sec" id="bonuses">
+        <div class="sec-tit"><h2>Your 6 bonuses</h2><span class="cont" id="c-bonus"></span></div>
+        <div class="bonus-grade" id="bonus-lista"></div>
+      </section>
+
+      <p class="rodape">The Braid Map · 50 Braid Styles, Step by Step<br>For personal use. Please don't share or resell the files.<br>This guide teaches hair styling techniques. It is not medical advice and makes no claims about hair growth or scalp health.<br>Questions? <a href="mailto:support@htguias.com">support@htguias.com</a></p>
+    </section>
+
+    <!-- GUIDE -->
+    <section class="tela" id="t-guide" hidden>
+      <div class="tela-cab"><span class="kicker">The full guide</span><h1>The Braid Map</h1></div>
+      <div class="livro">
+        <img src="/assets/capas/guide-capa-800.webp" alt="The Braid Map cover" width="800" height="1131">
+        <div>
+          <span class="pilula ok"><svg aria-hidden="true"><use href="#i-ok"/></svg>Unlocked</span>
+          <h2>50 Braid Styles, Step by Step</h2>
+          <p>166 pages · Preparation + 50 styles, each with a Style Profile, The Map and Step by Step.</p>
+        </div>
+        <div class="acoes">
+          <a class="btn" id="btn-abrir-guia" href="#read/guide/1"><svg aria-hidden="true"><use href="#i-livro"/></svg><span>Open the guide</span></a>
+          <button class="btn claro" type="button" data-pdf="guide"><svg aria-hidden="true"><use href="#i-pdf"/></svg>PDF</button>
+        </div>
+      </div>
+
+      <div class="busca">
+        <div class="campo"><svg aria-hidden="true"><use href="#i-busca"/></svg>
+          <input id="busca" type="search" autocomplete="off" placeholder="Search: knotless, bob, packs, kids…" aria-label="Search a style or topic">
+          <button class="limpar" id="busca-limpar" type="button" aria-label="Clear search" hidden>×</button>
+        </div>
+      </div>
+      <div class="chips" id="chips" role="group" aria-label="Filter the styles"></div>
+      <div id="guia-lista"></div>
+    </section>
+
+    <!-- SUPPORT -->
+    <section class="tela" id="t-support" hidden>
+      <div class="tela-cab"><span class="kicker">Support</span><h1>How can we help?</h1><p>Most answers are right here. If yours isn't, there's a button at the bottom to write to us.</p></div>
+      <div class="faq-grupo"><h3>Access & the app</h3><div class="faq">
+        <details id="faq-access"><summary>I didn't get my access email.</summary><div class="r"><p>Your access is sent to the email you used at checkout, right after payment. Check your <b>Spam</b>, <b>Promotions</b> and <b>Updates</b> folders and search for “Braid Map”.</p><p>You don't need to wait for it: you can log in right here with your purchase email, no password needed. Still stuck? <a href="#" data-contato>contact support</a> with the email you used to buy and we'll help.</p></div></details>
+        <details id="faq-login"><summary>I can't log in.</summary><div class="r"><ul><li>Type the same email you used at checkout, with no spaces. Check for typos like “gmail.con” or “hotmail.co”.</li><li>If you opened the link inside Instagram, Facebook or TikTok, tap <b>•••</b> and choose <b>Open in browser</b>.</li><li>Still not working? Update your browser or try Safari (iPhone) or Chrome (Android), then <a href="#" data-contato>contact support</a>.</li></ul></div></details>
+        <details id="faq-bonus"><summary>Where are my bonuses?</summary><div class="r"><p>In the <b>Bonuses</b> tab, in the menu (and also at the bottom of Home). Each one opens in the app and has its own PDF. Bonuses marked <b>Coming soon</b> are being finished and will show up right there: you don't need to do anything.</p></div></details>
+        <details id="faq-devices"><summary>Can I use it on more than one device?</summary><div class="r"><p>Yes. Log in with the same email on your phone, tablet and computer. Your favorites and the page where you stopped are saved on each device.</p></div></details>
+      </div></div>
+      <div class="faq-grupo"><h3>Opening & printing</h3><div class="faq">
+        <details id="faq-pdf-phone"><summary>How do I open the PDF on my phone?</summary><div class="r"><p>You don't need the PDF to read: the Guide tab opens every page right here, with zoom. To keep the file, tap <b>PDF</b> › <b>Download</b>.</p><ul><li><b>iPhone:</b> it opens in Safari. Tap <b>Share</b> › <b>Save to Files</b> (or open it in <b>Books</b>).</li><li><b>Android:</b> it goes to your <b>Downloads</b> folder. Open it with Files or Google Drive.</li></ul><p>The file is 31 MB, so use Wi-Fi.</p></div></details>
+        <details id="faq-pdf-computer"><summary>How do I open it on my computer?</summary><div class="r"><p>Click <b>PDF</b> › <b>Download</b>. It opens in your browser (Chrome, Edge or Safari) or in Adobe Acrobat Reader, which is free. Later, you'll find it in your <b>Downloads</b> folder. You can also log in here on the computer and read it in the app.</p></div></details>
+        <details id="faq-print"><summary>How do I print it?</summary><div class="r"><ul><li><b>Paper:</b> Letter (8.5 × 11 in).</li><li><b>Scale:</b> “Fit to page” (or “Fit to printable area”), so nothing gets cut. The pages are A4 size, so you'll see a thin white border.</li><li><b>Color or black &amp; white?</b> Color is best: the maps use color to tell the rows apart. Black &amp; white works for the Preparation and the steps; on the maps, follow the row numbers.</li><li><b>Save ink:</b> print only the pages you need. Each style is 3 pages in a row (Style 03 = pages 23–25), and the Guide tab shows every page number. Print the Preparation (pages 5–16) once and keep it.</li></ul></div></details>
+      </div></div>
+      <div class="faq-grupo"><h3>Braiding with the guide</h3><div class="faq">
+        <details id="faq-packs"><summary>How many packs of hair do I buy?</summary><div class="r"><p><a class="pg" href="#read/guide/7">Page 7</a> (How Many Packs) has a chart by braid size and length, for adults and kids. Each style's <b>Style Profile</b> (its first page) shows the packs for that style.</p><ul><li>Always buy <b>1 extra pack</b>, in the same color number.</li><li>A 3X pack holds 3 bundles: count it as 3.</li><li>Thick hair or a bigger head? Add 1 pack.</li><li>13 Two-Strand Twists and 14 Mini Braids use your own hair, no extensions.</li></ul></div></details>
+        <details id="faq-beginner"><summary>I'm a beginner. Where do I start?</summary><div class="r"><ul><li>Read <a class="pg" href="#read/guide/2">page 2</a> (How to Use This Guide).</li><li>Read the Preparation once, <a class="pg" href="#read/guide/5">pages 5–16</a>.</li><li>Pick a Level 1 style (01–15). 03 Medium Knotless is the classic first style.</li><li>Braid one row at the nape and check it against the map before doing the whole head.</li><li><a class="pg" href="#read/guide/16">Page 16</a> lists the 8 mistakes beginners make most, with the fix for each.</li></ul></div></details>
+        <details id="faq-left"><summary>I'm left-handed. Does the guide work for me?</summary><div class="r"><p>Yes. The steps are the same; many left-handed braiders just work from the other side. <a class="pg" href="#read/guide/11">Page 11</a> (Grip &amp; Tension) explains overhand and underhand: pick the grip that feels natural and keep it on every braid. That's what keeps them even.</p><p>Bonus 1, Do It On Yourself, has a short left-handed checklist on page 8.</p></div></details>
+        <details id="faq-loose"><summary>My braids come out loose or uneven.</summary><div class="r"><ul><li><b>Different sizes:</b> part the whole row first and follow the squares on that style's Map (its 2nd page). <a class="pg" href="#read/guide/9">Page 9</a> shows how to part.</li><li><b>Thick and thin along the braid:</b> keep the same grip from root to end (<a class="pg" href="#read/guide/11">page 11</a>).</li><li><b>Loose or bulky at the root:</b> braid 2–3 stitches of your own hair before the first feed-in, and keep each feed-in piece about ⅓ of your section (<a class="pg" href="#read/guide/10">page 10</a>).</li><li><b>Hands slipping:</b> a little gel on your fingertips. Rest your arms: tired arms braid loose.</li><li>Stop after the first row and check it against the map (<a class="pg" href="#read/guide/16">page 16</a>). Fixing 7 braids is easy; fixing 60 isn't.</li></ul></div></details>
+        <details id="faq-time"><summary>How long will a style take me?</summary><div class="r"><p>Every Style Profile shows the hours for a beginner, and every Map splits the head into 3 work sections with the time for each, so you can braid in sessions.</p><p>Level 1 goes from 1–2 h (08 Straight-Back Cornrows) to 7–10 h (03 Medium Knotless). Small and micro styles take the longest (32 Micro Braids: 16–22 h). You get faster with practice. In the Guide tab, filter the styles by time.</p></div></details>
+        <details id="faq-kids"><summary>Can I use it on my daughter?</summary><div class="r"><p>Yes. <a class="pg" href="#read/guide/13">Page 13</a> (Braiding a Child) covers short sessions, a gentle grip and lighter styles. 13 of the 50 styles are shown on a girl: tap <b>Kids</b> in the Guide tab. Start with 08 Straight-Back Cornrows (1–2 h) or 11 Knotless with Beads (3–5 h).</p><p>Keep your grip lighter than on an adult; if she says it hurts, loosen that braid. Bonus 2 adds 20 back-to-school styles.</p></div></details>
+        <details id="faq-hurt"><summary>It feels tight or it hurts. What do I do?</summary><div class="r"><p>Firm at the root, never pulling the skin (<a class="pg" href="#read/guide/11">page 11</a>). If it hurts or you see bumps at the root, stop and loosen or redo that braid, and use a lighter grip on the edges and the nape. The guide teaches styling technique; it isn't medical advice.</p></div></details>
+      </div></div>
+      <div class="faq-grupo"><h3>Your purchase</h3><div class="faq">
+        <details id="faq-guarantee"><summary>How does the guarantee work?</summary><div class="r"><p>You have a <b>7-day money-back guarantee</b>. Email <a href="mailto:support@htguias.com">support@htguias.com</a> within 7 days of your purchase, with the email you used to buy, and we'll refund 100% of your payment.</p><p>If the problem is access, the PDF or printing, tell us too: we can usually sort it out by email.</p></div></details>
+        <details id="faq-subscription"><summary>Is it a subscription?</summary><div class="r"><p>No. It's a one-time payment with lifetime access to the guide and your bonuses.</p></div></details>
+        <details id="faq-video"><summary>Is this a video course?</summary><div class="r"><p>No. The Braid Map is an illustrated guide: maps, charts and photo steps. Read it here in the app, download the PDF, or print it.</p></div></details>
+      </div></div>
+      <div class="contato">
+        <h2>Still need help?</h2>
+        <p>Tap the button to open your email app with the message ready. Just add your question and send.</p>
+        <label for="duvida">Your question (optional)</label>
+        <textarea id="duvida" placeholder="Tell us what happened or what you need…"></textarea>
+        <button class="btn full" type="button" data-contato>
+          <svg aria-hidden="true"><use href="#i-mail"/></svg>Contact support</button>
+        <p class="alt">No email app? Write to <a href="mailto:support@htguias.com">support@htguias.com</a> <button class="l-btn" type="button" id="copiar-mail" style="height:30px;min-width:30px;padding:0 7px;margin-left:4px;vertical-align:middle" aria-label="Copy the email address"><svg aria-hidden="true" style="width:15px;height:15px"><use href="#i-copiar"/></svg></button></p>
+      </div>
+    </section>
+
+    <!-- APP (install) -->
+    <section class="tela" id="t-app" hidden>
+      <div class="tela-cab"><span class="kicker">Get the app</span><h1>The Braid Map on your phone</h1><p>Add it to your home screen in 30 seconds. It opens full screen, like an app, with nothing to download from an app store.</p></div>
+      <div class="app-hero">
+        <img src="/assets/icon-bm-192.png" alt="The Braid Map app icon" width="192" height="192">
+        <div><b>The Braid Map</b><p>Your 50 styles and bonuses, one tap away.</p></div>
+      </div>
+      <div class="instalado" id="ja-instalado" hidden><svg aria-hidden="true"><use href="#i-ok"/></svg>You're using the app. You're all set.</div>
+      <button class="btn full terra" type="button" id="btn-instalar" style="margin-top:12px" hidden><svg aria-hidden="true"><use href="#i-mais-q"/></svg>Install the app</button>
+      <div class="alerta" id="alerta-inapp" hidden><b>Open this page in your browser first.</b> You're inside another app (like Instagram or Facebook). Tap the <b>•••</b> menu and choose <b>Open in browser</b> (Safari on iPhone, Chrome on Android), then follow the steps below.</div>
+      <div id="so-lista">
+        <div class="so" data-so="ios">
+          <h3><svg aria-hidden="true"><use href="#i-cel"/></svg>iPhone &amp; iPad<small>Safari</small></h3>
+          <ol>
+            <li><span>Open this page in <b>Safari</b>.</span></li>
+            <li><span>Tap the <b>Share</b> button <svg aria-hidden="true"><use href="#i-compart"/></svg> (the square with an arrow, at the bottom or top of the screen).</span></li>
+            <li><span>Scroll down and tap <b>Add to Home Screen</b> <svg aria-hidden="true"><use href="#i-mais-q"/></svg>.</span></li>
+            <li><span>Tap <b>Add</b>. The Braid Map icon appears on your home screen.</span></li>
+          </ol>
+        </div>
+        <div class="so" data-so="android">
+          <h3><svg aria-hidden="true"><use href="#i-cel"/></svg>Android<small>Chrome</small></h3>
+          <ol>
+            <li><span>Open this page in <b>Chrome</b>.</span></li>
+            <li><span>Tap the <b>menu</b> <svg aria-hidden="true"><use href="#i-pontos"/></svg> at the top right.</span></li>
+            <li><span>Tap <b>Install app</b> or <b>Add to Home screen</b>.</span></li>
+            <li><span>Confirm with <b>Install</b> (or <b>Add</b>). The icon appears with your apps.</span></li>
+          </ol>
+        </div>
+        <div class="so" data-so="pc">
+          <h3><svg aria-hidden="true"><use href="#i-pc"/></svg>Computer<small>Chrome or Edge</small></h3>
+          <ol>
+            <li><span>Click the <b>install</b> icon at the right end of the address bar (a screen with an arrow or a <b>+</b>).</span></li>
+            <li><span>Click <b>Install</b>. Or just bookmark this page.</span></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- BONUSES (#bonuses) -->
+    <section class="tela" id="t-bonuses" hidden>
+      <div class="tela-cab"><span class="kicker">Your bonuses</span><h1>6 bonus guides</h1><p>Extra guides that come with your Braid Map. Tap any cover to read it in the app or download the PDF.</p></div>
+      <div class="sec-tit"><h2>All bonuses</h2><span class="cont" id="c-bonus2"></span></div>
+      <div class="bonus-grade" id="bonus-lista2"></div>
+      <p class="rodape">Questions about your bonuses? <a href="mailto:support@htguias.com">support@htguias.com</a></p>
+    </section>
+
+    <!-- BONUS (#bonus/N) -->
+    <section class="tela" id="t-bonus" hidden><div id="bonus-corpo"></div></section>
+
+  </main>
+
+  <nav class="barra" aria-label="Sections">
+    <a href="#home" data-aba="home"><svg aria-hidden="true"><use href="#i-casa"/></svg>Home</a>
+    <a href="#guide" data-aba="guide"><svg aria-hidden="true"><use href="#i-livro"/></svg>Guide</a>
+      <a href="#bonuses" data-aba="bonuses"><svg aria-hidden="true"><use href="#i-presente"/></svg>Bonuses</a>
+    <a href="#support" data-aba="support"><svg aria-hidden="true"><use href="#i-ajuda"/></svg>Support</a>
+    <a href="#app" data-aba="app"><svg aria-hidden="true"><use href="#i-cel"/></svg>Get the app</a>
+  </nav>
+</div>
+
+<!-- ═════════════ LEITOR ═════════════ -->
+<div class="leitor" id="v-leitor" role="dialog" aria-modal="true" aria-labelledby="l-titulo" hidden>
+  <header class="l-topo">
+    <button class="l-voltar" id="l-voltar" type="button" aria-label="Close the reader"><svg aria-hidden="true"><use href="#i-esq"/></svg></button>
+    <div class="l-tit"><b id="l-titulo"></b><span id="l-pag"></span></div>
+    <button class="l-btn fav" id="l-fav" type="button" aria-pressed="false" aria-label="Save this style to favorites" hidden><svg aria-hidden="true"><use href="#i-estrela"/></svg></button>
+    <button class="l-btn" id="l-zoom" type="button" aria-pressed="false" aria-label="Zoom in"><svg aria-hidden="true"><use href="#i-zoom"/></svg><span class="t">Zoom</span></button>
+    <button class="l-btn" id="l-indice" type="button" aria-label="Contents"><svg aria-hidden="true"><use href="#i-lista"/></svg><span class="t">Contents</span></button>
+    <button class="l-btn" id="l-pdf" type="button" aria-label="PDF"><svg aria-hidden="true"><use href="#i-pdf"/></svg><span class="t">PDF</span></button>
+  </header>
+  <div class="l-rolagem" id="l-rolagem"><div class="l-paginas" id="l-paginas"></div></div>
+  <div class="l-dica" id="l-dica">Double-tap a page to zoom</div>
+</div>
+<div class="gaveta-fundo" id="gaveta-fundo" hidden></div>
+<aside class="gaveta" id="gaveta" aria-label="Contents" hidden>
+  <div class="cab"><b id="g-titulo">Contents</b><button class="fechar" id="g-fechar" type="button" aria-label="Close"><svg aria-hidden="true"><use href="#i-x"/></svg></button></div>
+  <div class="busca-g" id="g-busca-caixa"><div class="campo"><svg aria-hidden="true"><use href="#i-busca"/></svg><input id="g-busca" type="search" autocomplete="off" placeholder="Find a style or topic" aria-label="Find a style or topic"></div></div>
+  <div class="corpo" id="g-corpo"></div>
+</aside>
+<div class="modal-fundo" id="modal" hidden><div class="modal" role="dialog" aria-modal="true" id="modal-caixa"></div></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+/* ═══════════ DADOS (injetados pelo scripts/braid-app-montar.cjs) ═══════════ */
+var BM = {"suporte":"support@htguias.com","assunto":"The Braid Map – Support","garantiaDias":7,"guia":{"paginas":166,"pdf":"/pdf/The-Braid-Map.pdf","mb":31},"inicio":[{"p":2,"t":"How to Use This Guide","d":"The 3 pages of every style, the 3 levels, where to start","k":"start beginner levels numbers first"},{"p":3,"ate":4,"t":"All 50 Styles","d":"Every style at a glance","k":"table list all styles quick chart"}],"prep":[{"p":5,"t":"What You Need","d":"What do I need before I start?","k":"the basics nice to have"},{"p":6,"t":"Braid Sizes","d":"Small, smedium, medium... what's the difference?","k":"the 5 sizes (mid-back, adult head) how to choose"},{"p":7,"t":"How Many Packs","d":"How many packs of braiding hair do I buy?","k":"packs by size and length before you buy"},{"p":8,"t":"Hair Prep","d":"How do I get my hair ready to braid?","k":"the night before do / don't"},{"p":9,"t":"How to Part","d":"How do I get clean, straight parts?","k":"the 4 sections 3 ways to part with the rat-tail comb"},{"p":10,"t":"Feed-in Step by Step","d":"How do I add hair with no knot at the root?","k":"knotless feed-in feed-ins per braid feed-in cornrows"},{"p":11,"t":"Grip & Tension","d":"How tight should the braid be?","k":"2 grips firm, not tight no slipping"},{"p":12,"t":"Finishing the Ends","d":"How do I finish the ends so they don't unravel?","k":"4 ways to finish safe with hot water"},{"p":13,"t":"Braiding a Child","d":"How do I braid my daughter without tears?","k":"4 rules for small heads make it easier"},{"p":14,"t":"Care & Maintenance","d":"How do I keep my braids neat for weeks?","k":"the routine how long to keep it in signs it's time"},{"p":15,"t":"Take Down","d":"Why does so much hair come out at take down?","k":"step by step what's normal"},{"p":16,"t":"8 Common Mistakes","d":"What do beginners get wrong the most?","k":"mistake → how to fix"}],"estilos":[{"n":"01","nome":"Large Knotless","nivel":1,"p":17,"horas":"4–6","hmax":6,"pacotesTxt":"5–7 packs","quem":"adult","k":"mid-back level 1 women "},{"n":"02","nome":"Jumbo Knotless","nivel":1,"p":20,"horas":"2–4","hmax":4,"pacotesTxt":"4–6 packs","quem":"adult","k":"mid-back level 1 women "},{"n":"03","nome":"Medium Knotless","nivel":1,"p":23,"horas":"7–10","hmax":10,"pacotesTxt":"6–8 packs","quem":"adult","k":"mid-back level 1 women "},{"n":"04","nome":"Medium Box Braids","nivel":1,"p":26,"horas":"5–7","hmax":7,"pacotesTxt":"6–8 packs","quem":"adult","k":"mid-back level 1 women "},{"n":"05","nome":"Jumbo Box Braids","nivel":1,"p":29,"horas":"2–3","hmax":3,"pacotesTxt":"4–6 packs","quem":"adult","k":"mid-back level 1 women "},{"n":"06","nome":"Knotless Bob","nivel":1,"p":32,"horas":"3–5","hmax":5,"pacotesTxt":"2–3 packs","quem":"kid","k":"chin level 1 kids kid girl child children daughter school "},{"n":"07","nome":"Box Braid Bob","nivel":1,"p":35,"horas":"4–6","hmax":6,"pacotesTxt":"3–4 packs","quem":"adult","k":"chin level 1 women "},{"n":"08","nome":"Straight-Back Cornrows","nivel":1,"p":38,"horas":"1–2","hmax":2,"pacotesTxt":"1–2 packs","quem":"kid","k":"shoulder level 1 kids kid girl child children daughter school "},{"n":"09","nome":"Two Feed-in Braids","nivel":1,"p":41,"horas":"1–2","hmax":2,"pacotesTxt":"2–3 packs","quem":"adult","k":"waist level 1 women "},{"n":"10","nome":"Feed-in Ponytail","nivel":1,"p":44,"horas":"2–3","hmax":3,"pacotesTxt":"3–4 packs","quem":"adult","k":"waist level 1 women "},{"n":"11","nome":"Knotless with Beads","nivel":1,"p":47,"horas":"3–5","hmax":5,"pacotesTxt":"3–4 packs","quem":"kid","k":"shoulder level 1 kids kid girl child children daughter school "},{"n":"12","nome":"Half-Up Knotless","nivel":1,"p":50,"horas":"4–6","hmax":6,"pacotesTxt":"4–5 packs","quem":"kid","k":"mid-back level 1 kids kid girl child children daughter school "},{"n":"13","nome":"Two-Strand Twists","nivel":1,"p":53,"horas":"2–4","hmax":4,"pacotesTxt":"no extensions","quem":"adult","k":"your length level 1 women no extensions own hair natural"},{"n":"14","nome":"Mini Braids","nivel":1,"p":56,"horas":"4–6","hmax":6,"pacotesTxt":"no extensions","quem":"kid","k":"her length level 1 kids kid girl child children daughter school no extensions own hair natural"},{"n":"15","nome":"Senegalese Twists","nivel":1,"p":59,"horas":"5–7","hmax":7,"pacotesTxt":"6–8 packs","quem":"adult","k":"mid-back level 1 women "},{"n":"16","nome":"Smedium Knotless","nivel":2,"p":62,"horas":"9–12","hmax":12,"pacotesTxt":"7–9 packs","quem":"adult","k":"mid-back level 2 women "},{"n":"17","nome":"Boho Knotless","nivel":2,"p":65,"horas":"9–12","hmax":12,"pacotesTxt":"5–7 + 4–5 curly packs","quem":"adult","k":"mid-back level 2 women "},{"n":"18","nome":"Goddess Knotless","nivel":2,"p":68,"horas":"8–11","hmax":11,"pacotesTxt":"6–8 + 2–3 curly packs","quem":"adult","k":"mid-back level 2 women "},{"n":"19","nome":"Goddess Box Braids","nivel":2,"p":71,"horas":"6–9","hmax":9,"pacotesTxt":"6–8 + 2–3 curly packs","quem":"adult","k":"mid-back level 2 women "},{"n":"20","nome":"French Curl Braids","nivel":2,"p":74,"horas":"9–12","hmax":12,"pacotesTxt":"5–7 packs","quem":"adult","k":"waist level 2 women "},{"n":"21","nome":"Triangle-Part Box Braids","nivel":2,"p":77,"horas":"4–6","hmax":6,"pacotesTxt":"3–4 packs","quem":"kid","k":"shoulder level 2 kids kid girl child children daughter school "},{"n":"22","nome":"Brick-Lay Box Braids","nivel":2,"p":80,"horas":"6–8","hmax":8,"pacotesTxt":"6–8 packs","quem":"adult","k":"mid-back level 2 women "},{"n":"23","nome":"Side-Part Knotless","nivel":2,"p":83,"horas":"7–10","hmax":10,"pacotesTxt":"6–8 packs","quem":"adult","k":"mid-back level 2 women "},{"n":"24","nome":"Half Cornrows + Knotless","nivel":2,"p":86,"horas":"3–5","hmax":5,"pacotesTxt":"2–3 packs","quem":"kid","k":"shoulder level 2 kids kid girl child children daughter school "},{"n":"25","nome":"Six Feed-in Cornrows","nivel":2,"p":89,"horas":"1–2","hmax":2,"pacotesTxt":"1–2 packs","quem":"kid","k":"shoulder level 2 kids kid girl child children daughter school "},{"n":"26","nome":"Passion Twists","nivel":2,"p":92,"horas":"5–7","hmax":7,"pacotesTxt":"5–7 packs","quem":"adult","k":"shoulder level 2 women "},{"n":"27","nome":"Island Twists","nivel":2,"p":95,"horas":"7–10","hmax":10,"pacotesTxt":"3–4 bundles","quem":"adult","k":"mid-back level 2 women "},{"n":"28","nome":"Knotless Bun","nivel":2,"p":98,"horas":"3–5","hmax":5,"pacotesTxt":"3–4 packs","quem":"kid","k":"shoulder level 2 kids kid girl child children daughter school "},{"n":"29","nome":"Cornrow Ponytail","nivel":2,"p":101,"horas":"2–3","hmax":3,"pacotesTxt":"2–3 packs","quem":"kid","k":"mid-back level 2 kids kid girl child children daughter school "},{"n":"30","nome":"Ghana Braids","nivel":2,"p":104,"horas":"3–4","hmax":4,"pacotesTxt":"3–4 packs","quem":"adult","k":"mid-back level 2 women "},{"n":"31","nome":"Small Knotless","nivel":3,"p":107,"horas":"11–15","hmax":15,"pacotesTxt":"8–10 packs","quem":"adult","k":"mid-back level 3 women "},{"n":"32","nome":"Micro Braids","nivel":3,"p":110,"horas":"16–22","hmax":22,"pacotesTxt":"8–10 packs","quem":"adult","k":"mid-back level 3 women "},{"n":"33","nome":"Heart-Part Knotless","nivel":3,"p":113,"horas":"8–11","hmax":11,"pacotesTxt":"6–8 packs","quem":"adult","k":"mid-back level 3 women "},{"n":"34","nome":"Straight-Back Stitch","nivel":3,"p":116,"horas":"3–5","hmax":5,"pacotesTxt":"3–5 packs","quem":"adult","k":"mid-back level 3 women "},{"n":"35","nome":"Zig-Zag Stitch Braids","nivel":3,"p":119,"horas":"3–5","hmax":5,"pacotesTxt":"2–3 packs","quem":"kid","k":"shoulder level 3 kids kid girl child children daughter school "},{"n":"36","nome":"Fulani Braids","nivel":3,"p":122,"horas":"4–6","hmax":6,"pacotesTxt":"4–6 packs","quem":"adult","k":"mid-back level 3 women "},{"n":"37","nome":"Fulani + Knotless Back","nivel":3,"p":125,"horas":"5–7","hmax":7,"pacotesTxt":"5–7 packs","quem":"adult","k":"mid-back level 3 women "},{"n":"38","nome":"Lemonade Braids","nivel":3,"p":128,"horas":"4–6","hmax":6,"pacotesTxt":"4–6 packs","quem":"adult","k":"mid-back level 3 women "},{"n":"39","nome":"Tribal Braids","nivel":3,"p":131,"horas":"5–8","hmax":8,"pacotesTxt":"5–7 packs","quem":"adult","k":"mid-back level 3 women "},{"n":"40","nome":"Halo / Crown Braid","nivel":3,"p":134,"horas":"2–4","hmax":4,"pacotesTxt":"1–2 packs","quem":"kid","k":"tucked in level 3 kids kid girl child children daughter school "},{"n":"41","nome":"Cornrow Designs","nivel":3,"p":137,"horas":"3–5","hmax":5,"pacotesTxt":"2–3 packs","quem":"kid","k":"shoulder level 3 kids kid girl child children daughter school "},{"n":"42","nome":"Butterfly Locs","nivel":3,"p":140,"horas":"4–6","hmax":6,"pacotesTxt":"5–7 packs","quem":"adult","k":"shoulder level 3 women "},{"n":"43","nome":"Faux Locs","nivel":3,"p":143,"horas":"6–9","hmax":9,"pacotesTxt":"8–12 packs","quem":"adult","k":"mid-back level 3 women "},{"n":"44","nome":"Soft Locs","nivel":3,"p":146,"horas":"5–8","hmax":8,"pacotesTxt":"6–8 packs","quem":"adult","k":"mid-back level 3 women "},{"n":"45","nome":"Goddess Faux Locs","nivel":3,"p":149,"horas":"6–9","hmax":9,"pacotesTxt":"8–11 packs","quem":"adult","k":"mid-back level 3 women "},{"n":"46","nome":"Boho Bob","nivel":3,"p":152,"horas":"6–9","hmax":9,"pacotesTxt":"5–7 packs","quem":"adult","k":"chin level 3 women "},{"n":"47","nome":"Crochet Braids","nivel":3,"p":155,"horas":"2–4","hmax":4,"pacotesTxt":"3–4 packs","quem":"adult","k":"shoulder level 3 women "},{"n":"48","nome":"Men's Box Braids","nivel":3,"p":158,"horas":"3–5","hmax":5,"pacotesTxt":"2–3 packs","quem":"men","k":"shoulder level 3 men man guys boys "},{"n":"49","nome":"Men's Cornrows","nivel":3,"p":161,"horas":"1–3","hmax":3,"pacotesTxt":"0–1 packs","quem":"men","k":"to the nape level 3 men man guys boys "},{"n":"50","nome":"Pop Smoke Braids","nivel":3,"p":164,"horas":"3–5","hmax":5,"pacotesTxt":"2–4 packs","quem":"men","k":"shoulder level 3 men man guys boys "}],"bonus":[{"n":1,"titulo":"Do It On Yourself","para":"Braid yourself","desc":"The same maps on your own head: the mirror setup, the sections you can’t see, and an order that saves your arms.","pronto":true,"pdf":"/pdf/Bonus-1-Do-It-On-Yourself.pdf","mb":4,"paginas":11,"indice":[{"p":1,"t":"Cover"},{"p":2,"t":"The 2-Mirror Setup","d":"How do I see the back of my own head?"},{"p":3,"t":"Parting the Back You Can't See","d":"How do I part the nape if I can't see it?"},{"p":4,"t":"The Order That Saves Your Arms","d":"Why do my arms burn after one hour?"},{"p":5,"t":"Split It Into Sessions","d":"Do I have to do it all in one day?"},{"p":6,"t":"Best First Styles on Yourself","d":"Which style should I try first on my own head?"},{"p":7,"t":"Using the Maps on Your Head","d":"Do the map numbers work on my own head?"},{"p":8,"t":"Overhand or Underhand on Yourself","d":"Which grip is easier on my own head?"},{"p":9,"t":"The Back & the Edges","d":"How do I make the back and my hairline neat?"},{"p":10,"t":"8 Self-Braiding Mistakes","d":"What goes wrong when I braid my own hair?"},{"p":11,"t":"Your Weekend Checklist","d":"What do I do, and when, in one weekend?"}]},{"n":2,"titulo":"20 Back-to-School Kids' Styles","para":"Braid kids","desc":"20 kids’ styles for the first day of school and picture day, step by step.","pronto":false},{"n":3,"titulo":"The 20 Best-Selling Styles","para":"Braid for income","desc":"The 20 styles clients ask for the most, so you know what to offer first.","pronto":true,"pdf":"/pdf/Bonus-3-The-20-Best-Selling-Styles.pdf","mb":3,"paginas":8,"indice":[{"p":1,"t":"Cover"},{"p":2,"t":"How This List Was Made","d":"Which styles should I learn first to take clients?"},{"p":3,"t":"The Ranking · #1 to #4","d":"What do clients book the most?"},{"p":4,"t":"The Ranking · #5 to #8","d":"Which quick styles do clients want?"},{"p":5,"t":"The Ranking · #9 to #12","d":"Which cornrow styles do clients ask for?"},{"p":6,"t":"The Ranking · #13 to #16","d":"What else do clients book often?"},{"p":7,"t":"The Ranking · #17 to #20","d":"Which locs, crochet and men's styles sell?"},{"p":8,"t":"What to Offer First","d":"Which styles go on my first menu?"}]},{"n":4,"titulo":"How to Wash Your Braids","para":"Upkeep","desc":"Wash and refresh your braids without frizz and without taking them down.","pronto":false},{"n":5,"titulo":"How to Price Your Braids","para":"Braid for income","desc":"Set your prices by style, time and hair, and stop undercharging.","pronto":true,"pdf":"/pdf/Bonus-5-How-to-Price-Your-Braids.pdf","mb":3.1,"paginas":9,"indice":[{"p":1,"t":"Cover"},{"p":2,"t":"What Goes Into Your Price","d":"What should my price cover?"},{"p":3,"t":"The Formula","d":"How do I turn hours into a price?"},{"p":4,"t":"Your Price Table","d":"How much do I charge for each style?"},{"p":5,"t":"Extras","d":"What do I charge extra for?"},{"p":6,"t":"Deposit & Booking","d":"How do I take a deposit and book clients?"},{"p":7,"t":"Late & Cancellation Policy","d":"What do I write in my policy?"},{"p":8,"t":"Show Your Price Menu","d":"How do I show my prices so clients book?"},{"p":9,"t":"8 Undercharging Mistakes","d":"Why am I braiding so much and keeping so little?"}]},{"n":6,"titulo":"Vacation & Swim Braids","para":"Travel","desc":"Styles that survive the pool, the ocean and two weeks without touching them, plus chlorine and salt care.","pronto":false}]};
+
+/* ═══════════ REGRA DE PLANO (DESLIGADA) ═══════════
+   Por decisão do Heitor (23/11/2026), TODO MUNDO recebe TUDO: o guia e os 6 bônus, no plano Essential ou no Complete.
+   Para ligar a regra depois da validação: ponha REGRA_PLANO = true e preencha PLANO_DO_EMAIL() com o plano da compra
+   (ex.: webhook da Wiapy -> Supabase, como em apps/guias-membros). No plano 'essential', só o guia abre; os bônus
+   mostram o aviso de upgrade (texto em BLOQUEADO). */
+var REGRA_PLANO = false;
+function PLANO_DO_EMAIL(email) { return 'complete'; }
+function libera(item) {               // item: 'guide' | 'b1'…'b6'
+  if (!REGRA_PLANO || item === 'guide') return true;
+  return PLANO_DO_EMAIL(EMAIL) === 'complete';
+}
+var BLOQUEADO = 'This bonus is part of the Complete Plan. Write to us at ' + BM.suporte + ' to upgrade.';
+
+/* ═══════════ UTILITÁRIOS ═══════════ */
+function $(id) { return document.getElementById(id); }
+function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+function ico(n) { return '<svg aria-hidden="true"><use href="#i-' + n + '"/></svg>'; }
+function ler(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+function guardar(k, v) { try { v === null ? localStorage.removeItem(k) : localStorage.setItem(k, v); } catch (e) {} }
+function norm(s) { return String(s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[’'`]/g, '').replace(/[^a-z0-9 ]+/g, ' '); }
+function toast(t) { var el = $('toast'); el.textContent = t; el.classList.add('on'); clearTimeout(toast.t); toast.t = setTimeout(function () { el.classList.remove('on'); }, 2600); }
+function mostrar(v) { ['v-carregando', 'v-login', 'v-app'].forEach(function (x) { $(x).hidden = x !== v; }); }
+function emailValido(e) { return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(e); }
+
+/* ═══════════ ACESSO: qualquer e-mail válido entra (sem gateway e sem Supabase por enquanto) ═══════════ */
+var EMAIL = ler('bm:email') || '';
+function chave(k) { return 'bm:' + k + ':' + EMAIL; }
+
+/* ═══════════ LIVROS: o guia e os bônus prontos ═══════════ */
+var LIVROS = { guide: { id: 'guide', titulo: 'The Braid Map', paginas: BM.guia.paginas, pasta: '/assets/livros/guide/', pdf: BM.guia.pdf, mb: BM.guia.mb } };
+BM.bonus.forEach(function (b) { if (b.pronto) LIVROS['b' + b.n] = { id: 'b' + b.n, titulo: 'Bonus ' + b.n + ' · ' + b.titulo, curto: b.titulo, paginas: b.paginas, pasta: '/assets/livros/b' + b.n + '/', pdf: b.pdf, mb: b.mb, indice: b.indice }; });
+var PARTES = ['Style Profile', 'The Map', 'Step by Step'];
+function estiloDaPagina(p) { return p >= 17 ? BM.estilos[Math.floor((p - 17) / 3)] : null; }
+function rotulo(id, p) {
+  var L = LIVROS[id];
+  if (id !== 'guide') { var it = (L.indice || []).filter(function (x) { return x.p === p; })[0]; return { t: L.curto, s: (it ? it.t + ' · ' : '') + 'Page ' + p + ' of ' + L.paginas }; }
+  var e = estiloDaPagina(p);
+  if (e) return { t: e.n + ' · ' + e.nome, s: PARTES[(p - 17) % 3] + ' · Page ' + p + ' of ' + L.paginas, e: e };
+  var x = BM.inicio.concat(BM.prep).filter(function (y) { return y.p === p || (y.ate && p >= y.p && p <= y.ate); })[0];
+  return { t: x ? x.t : p === 1 ? 'Cover' : 'The Braid Map', s: (p >= 5 && p <= 16 ? 'Preparation · ' : '') + 'Page ' + p + ' of ' + L.paginas };
+}
+function paginaSalva(id) { var n = parseInt(ler(chave('pag:' + id)), 10); return n > 0 ? n : 0; }
+
+/* ═══════════ FAVORITOS (no aparelho, por e-mail) ═══════════ */
+var FAV = {
+  lista: function () { try { var l = JSON.parse(ler(chave('fav')) || '[]'); return Array.isArray(l) ? l : []; } catch (e) { return []; } },
+  tem: function (n) { return FAV.lista().indexOf(String(n)) >= 0; },
+  alterna: function (n) {
+    n = String(n); var l = FAV.lista(), i = l.indexOf(n);
+    if (i >= 0) l.splice(i, 1); else l.push(n);
+    guardar(chave('fav'), JSON.stringify(l));
+    toast(i >= 0 ? 'Removed from favorites' : '★ Saved to favorites');
+    return i < 0;
+  }
+};
+function estrela(n) {
+  var on = FAV.tem(n);
+  return '<button class="stella' + (on ? ' on' : '') + '" type="button" data-fav="' + n + '" aria-pressed="' + on + '" aria-label="' + (on ? 'Remove from favorites' : 'Save to favorites') + '">' + ico('estrela') + '</button>';
+}
+document.addEventListener('click', function (e) {
+  var b = e.target.closest('[data-fav]'); if (!b) return;
+  e.preventDefault();
+  var n = b.getAttribute('data-fav'), on = FAV.alterna(n);
+  [].forEach.call(document.querySelectorAll('[data-fav="' + n + '"]'), function (x) { x.classList.toggle('on', on); x.setAttribute('aria-pressed', String(on)); x.setAttribute('aria-label', on ? 'Remove from favorites' : 'Save to favorites'); });
+  LEITOR.atualizarFav();
+  if (TELA === 'guide' && FILTRO === 'fav') desenharGuia();
+});
+
+/* ═══════════ HOME ═══════════ */
+function desenharHome() {
+  var pg = paginaSalva('guide'), s;
+  $('ola-sub').textContent = pg > 1 ? 'Welcome back' : 'Welcome';
+  if (pg > 1) {
+    var r = rotulo('guide', pg);
+    s = '<a class="seguir" href="#read/guide/' + pg + '"><img src="/assets/capas/guide-capa-800.webp" alt="" width="800" height="1131"><div class="t"><small>Continue reading</small><b>' + esc(r.t) + '</b><span>' + esc(r.s) + '</span>' +
+      '<div class="prog"><i style="width:' + Math.round(100 * pg / LIVROS.guide.paginas) + '%"></i></div></div><span class="ir">' + ico('dir') + '</span></a>';
+  } else {
+    s = '<a class="seguir" href="#read/guide/2"><img src="/assets/capas/guide-capa-800.webp" alt="" width="800" height="1131"><div class="t"><small>Start here</small><b>Open your guide</b><span>Page 2 shows how the guide works, in one page.</span></div><span class="ir">' + ico('dir') + '</span></a>';
+  }
+  $('seguir').innerHTML = s;
+  $('faixa-app').hidden = APP.standalone;
+  var prontos = BM.bonus.filter(function (b) { return b.pronto; }).length;
+  $('c-bonus').textContent = prontos + ' of 6 ready';
+  $('bonus-lista').innerHTML = cartoesBonus();
+}
+function cartoesBonus() {
+  return BM.bonus.map(function (b) {
+    return '<a class="b-card' + (b.pronto ? '' : ' breve') + '" href="#bonus/' + b.n + '"><div class="capa"><img src="/assets/capas/b' + b.n + '-480.webp" alt="" width="480" height="360">' +
+      (b.pronto ? '<span class="pilula ok">' + ico('ok') + 'Ready</span>' : '<span class="pilula breve">' + ico('relogio') + 'Coming soon</span>') + '</div>' +
+      '<div class="t"><small>Bonus ' + b.n + '</small><b>' + esc(b.titulo) + '</b></div></a>';
+  }).join('');
+}
+
+/* ═══════════ GUIDE: índice por estilo, filtros e busca ═══════════ */
+var FILTROS = [
+  ['all', 'All styles'], ['fav', 'Favorites'], ['n1', 'Level 1'], ['n2', 'Level 2'], ['n3', 'Level 3'],
+  ['h4', 'Up to 4 h'], ['h8', '4 to 8 h'], ['h9', 'Over 8 h'], ['kids', 'Kids'], ['men', 'Men']
+];
+var FILTRO = 'all', BUSCA = '';
+function passaFiltro(e) {
+  switch (FILTRO) {
+    case 'fav': return FAV.tem(e.n);
+    case 'n1': case 'n2': case 'n3': return e.nivel === +FILTRO[1];
+    case 'h4': return e.hmax <= 4;
+    case 'h8': return e.hmax > 4 && e.hmax <= 8;
+    case 'h9': return e.hmax > 8;
+    case 'kids': return e.quem === 'kid';
+    case 'men': return e.quem === 'men';
+  }
+  return true;
+}
+function bate(texto) { var t = norm(BUSCA).split(' ').filter(Boolean); if (!t.length) return true; var c = norm(texto); return t.every(function (x) { return c.indexOf(x) >= 0 || (x.length > 3 && x.slice(-1) === 's' && c.indexOf(x.slice(0, -1)) >= 0); }); }
+function linhaEstilo(e) {
+  return '<div class="linha"><span class="nn">' + e.n + '</span><div class="t"><a class="abre" href="#read/guide/' + e.p + '"><b>' + esc(e.nome) + '</b>' +
+    '<small><span class="nivel">Level ' + e.nivel + '</span> · ' + esc(e.horas) + ' h · ' + esc(e.pacotesTxt) + (e.quem === 'kid' ? ' · shown on a girl' : e.quem === 'men' ? ' · men' : '') + '</small></a>' +
+    '<div class="partes"><a href="#read/guide/' + e.p + '">Profile · p. ' + e.p + '</a><a href="#read/guide/' + (e.p + 1) + '">Map · p. ' + (e.p + 1) + '</a><a href="#read/guide/' + (e.p + 2) + '">Steps · p. ' + (e.p + 2) + '</a></div></div>' + estrela(e.n) + '</div>';
+}
+function linhaTopico(x, nn) {
+  return '<div class="linha"><span class="nn prep">' + nn + '</span><div class="t"><a class="abre" href="#read/guide/' + x.p + '"><b>' + esc(x.t) + '</b><small>' + esc(x.d) + ' · p. ' + x.p + (x.ate ? '–' + x.ate : '') + '</small></a></div></div>';
+}
+function grupo(tit, info, linhas) { return linhas.length ? '<div class="grupo"><div class="grupo-tit">' + tit + '<span>' + info + '</span></div><div class="linhas">' + linhas.join('') + '</div></div>' : ''; }
+function desenharGuia() {
+  var pg = paginaSalva('guide'), ab = $('btn-abrir-guia');
+  ab.setAttribute('href', '#read/guide/' + (pg || 1));
+  ab.querySelector('span').textContent = pg > 1 ? 'Continue · page ' + pg : 'Open the guide';
+  $('chips').innerHTML = FILTROS.map(function (f) { return '<button class="chip' + (FILTRO === f[0] ? ' on' : '') + '" type="button" data-filtro="' + f[0] + '" aria-pressed="' + (FILTRO === f[0]) + '">' + (f[0] === 'fav' ? ico('estrela') : f[0][0] === 'h' ? ico('relogio') : '') + f[1] + '</button>'; }).join('');
+  var h = '', todos = FILTRO === 'all';
+  if (todos) {
+    h += grupo('Start here', 'pages 2–4', BM.inicio.filter(function (x) { return bate(x.t + ' ' + x.k); }).map(function (x) { return linhaTopico(x, x.p); }));
+    h += grupo('Preparation', 'pages 5–16 · read once', BM.prep.filter(function (x) { return bate(x.t + ' ' + x.k + ' ' + x.d); }).map(function (x) { return linhaTopico(x, x.p); }));
+  }
+  var niveis = { 1: 'Level 1 · Start here', 2: 'Level 2 · Intermediate', 3: 'Level 3 · Advanced' }, total = 0;
+  [1, 2, 3].forEach(function (nv) {
+    var l = BM.estilos.filter(function (e) { return e.nivel === nv && passaFiltro(e) && bate(e.n + ' ' + e.nome + ' ' + e.k); });
+    total += l.length;
+    var de = BM.estilos.filter(function (e) { return e.nivel === nv; });
+    h += grupo(niveis[nv], 'styles ' + de[0].n + '–' + de[de.length - 1].n, l.map(linhaEstilo));
+  });
+  if (!total && !todos) h += '<div class="vazio">' + (FILTRO === 'fav' && !BUSCA ? 'No favorites yet. Tap the ☆ next to any style to save it here.' : 'No styles match this filter.') + '</div>';
+  else if (!h) h = '<div class="vazio">Nothing found for “' + esc(BUSCA) + '”. Try another word, like “knotless”, “bob” or “packs”.</div>';
+  $('guia-lista').innerHTML = h;
+}
+document.addEventListener('click', function (e) {
+  var f = e.target.closest('[data-filtro]'); if (!f) return;
+  FILTRO = f.getAttribute('data-filtro'); desenharGuia();
+});
+$('busca').addEventListener('input', function () { BUSCA = this.value; $('busca-limpar').hidden = !BUSCA; desenharGuia(); });
+$('busca-limpar').addEventListener('click', function () { $('busca').value = ''; BUSCA = ''; this.hidden = true; desenharGuia(); $('busca').focus(); });
+
+/* ═══════════ BÔNUS (#bonus/N) ═══════════ */
+function desenharBonuses() {
+  var prontos = BM.bonus.filter(function (b) { return b.pronto; }).length;
+  $('c-bonus2').textContent = prontos + ' of 6 ready';
+  $('bonus-lista2').innerHTML = cartoesBonus();
+}
+function desenharBonus(n) {
+  var b = BM.bonus.filter(function (x) { return x.n === n; })[0];
+  if (!b) { location.hash = '#home'; return; }
+  var h = '<a class="voltar" href="#bonuses">' + ico('esq') + 'All bonuses</a>' +
+    '<div class="b-cab"><img src="/assets/bonus/capa-' + b.n + '.webp" alt="Bonus ' + b.n + ' cover" width="800" height="1131"><div><span class="kicker">Bonus ' + b.n + ' · ' + esc(b.para) + '</span><h1>' + esc(b.titulo) + '</h1><p>' + esc(b.desc) + '</p></div></div>';
+  if (!libera('b' + b.n)) h += '<div class="caixa-breve">' + ico('escudo') + '<div><b>Not included in your plan</b><p>' + esc(BLOQUEADO) + '</p></div></div>';
+  else if (b.pronto) {
+    var pg = paginaSalva('b' + b.n);
+    h += '<div class="b-acoes"><a class="btn terra" href="#read/b' + b.n + '/' + (pg || 1) + '">' + ico('livro') + (pg > 1 ? 'Continue · page ' + pg : 'Read in the app') + '</a>' +
+      '<button class="btn claro" type="button" data-pdf="b' + b.n + '">' + ico('pdf') + 'Download PDF · ' + b.mb + ' MB</button></div>';
+    if (b.indice && b.indice.length) h += '<section class="sec"><div class="sec-tit"><h2>Inside this bonus</h2><span class="cont">' + b.paginas + ' pages</span></div><div class="linhas" style="border-top:1px solid var(--linha);border-radius:8px">' +
+      b.indice.map(function (x) { return '<div class="linha"><span class="nn prep">' + x.p + '</span><div class="t"><a class="abre" href="#read/b' + b.n + '/' + x.p + '"><b>' + esc(x.t) + '</b>' + (x.d ? '<small>' + esc(x.d) + '</small>' : '') + '</a></div></div>'; }).join('') + '</div></section>';
+  } else {
+    h += '<div class="caixa-breve">' + ico('relogio') + '<div><b>Coming soon</b><p>This bonus is in its final review. It will appear right here in the app as soon as it’s ready. You don’t need to do anything: just come back and tap it.</p></div></div>';
+  }
+  h += '<p class="b-nota">Questions about your bonuses? <a href="mailto:' + BM.suporte + '">' + BM.suporte + '</a></p>';
+  $('bonus-corpo').innerHTML = h;
+}
+
+/* ═══════════ SUPORTE: e-mail com a mensagem pronta ═══════════ */
+function urlEmail(texto) {
+  var corpo = 'Hi! I need help with The Braid Map.\n\nLogin email: ' + (EMAIL || '(the email I used at checkout)') + '\n\nMy question:\n' + (texto && texto.trim() ? texto.trim() : '(write your question here)') + '\n\n---\nDevice: ' + navigator.userAgent.slice(0, 140);
+  return 'mailto:' + BM.suporte + '?subject=' + encodeURIComponent(BM.assunto) + '&body=' + encodeURIComponent(corpo);
+}
+function abrirEmail(texto) { location.href = urlEmail(texto); }
+document.addEventListener('click', function (e) {
+  var c = e.target.closest('[data-contato]'); if (!c) return;
+  e.preventDefault(); abrirEmail(($('duvida') || {}).value || '');
+});
+$('copiar-mail').addEventListener('click', function () {
+  var ok = function () { toast('Email address copied'); };
+  if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(BM.suporte).then(ok, function () { toast(BM.suporte); });
+  else toast(BM.suporte);
+});
+
+/* ═══════════ APP: instalar (PWA) ═══════════ */
+var UA = navigator.userAgent;
+var APP = {
+  ios: /iPhone|iPad|iPod/i.test(UA) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1),
+  android: /Android/i.test(UA),
+  inApp: /FBAN|FBAV|Instagram|TikTok|musical_ly|Line\/|; wv\)/i.test(UA),
+  standalone: (window.matchMedia && matchMedia('(display-mode: standalone)').matches) || navigator.standalone === true
+};
+var pedidoInstalar = null;
+window.addEventListener('beforeinstallprompt', function (e) { e.preventDefault(); pedidoInstalar = e; desenharApp(); });
+window.addEventListener('appinstalled', function () { pedidoInstalar = null; toast('The Braid Map is on your home screen'); desenharApp(); });
+function desenharApp() {
+  $('ja-instalado').hidden = !APP.standalone;
+  $('btn-instalar').hidden = APP.standalone || !pedidoInstalar;
+  $('alerta-inapp').hidden = APP.standalone || !APP.inApp;
+  var meu = APP.ios ? 'ios' : APP.android ? 'android' : 'pc', caixa = $('so-lista');
+  [].forEach.call(caixa.querySelectorAll('.so'), function (x) { x.classList.toggle('destaque', x.getAttribute('data-so') === meu); });
+  var d = caixa.querySelector('[data-so="' + meu + '"]'); if (d && caixa.firstElementChild !== d) caixa.insertBefore(d, caixa.firstElementChild);
+}
+$('btn-instalar').addEventListener('click', function () {
+  if (!pedidoInstalar) return;
+  pedidoInstalar.prompt();
+  pedidoInstalar.userChoice.then(function () { pedidoInstalar = null; desenharApp(); });
+});
+
+/* ═══════════ MODAL: PDF e conta ═══════════ */
+function abrirModal(html) { $('modal-caixa').innerHTML = html; $('modal').hidden = false; }
+function fecharModal() { $('modal').hidden = true; }
+$('modal').addEventListener('click', function (e) { if (e.target === this || e.target.closest('[data-fechar]')) fecharModal(); });
+function modalPdf(id) {
+  var L = LIVROS[id]; if (!L) return;
+  var nome = L.pdf.split('/').pop();
+  abrirModal('<div class="cab"><h3>' + esc(id === 'guide' ? 'The Braid Map · PDF' : L.titulo) + '</h3><button class="fechar" type="button" data-fechar aria-label="Close">' + ico('x') + '</button></div>' +
+    '<p>' + L.paginas + ' pages · ' + L.mb + ' MB. On a phone, use Wi-Fi. You can also read every page right here in the app, without downloading.</p>' +
+    '<div class="acoes"><a class="btn terra" href="' + L.pdf + '" target="_blank" rel="noopener">' + ico('livro') + 'Open the PDF</a>' +
+    '<a class="btn claro" href="' + L.pdf + '" download="' + nome + '">' + ico('pdf') + 'Download</a></div>' +
+    '<p style="margin-top:12px;font-size:13px;color:var(--mudo)">To print: Letter paper, scale “Fit to page”. More tips in <a href="#support/faq-print" data-fechar>Support</a>.</p>');
+}
+document.addEventListener('click', function (e) { var b = e.target.closest('[data-pdf]'); if (b) { e.preventDefault(); modalPdf(b.getAttribute('data-pdf')); } });
+$('btn-conta').addEventListener('click', function () {
+  abrirModal('<div class="cab"><h3>Your account</h3><button class="fechar" type="button" data-fechar aria-label="Close">' + ico('x') + '</button></div>' +
+    '<p>Signed in as<br><span class="mail">' + esc(EMAIL) + '</span></p>' +
+    '<div class="acoes"><button class="btn" type="button" data-contato>' + ico('mail') + 'Contact support</button>' +
+    '<a class="btn claro" href="#app" data-fechar>' + ico('cel') + 'Get the app</a>' +
+    '<button class="btn claro" type="button" id="sair">' + ico('sair') + 'Sign out</button></div>');
+  $('sair').addEventListener('click', function () { guardar('bm:email', null); EMAIL = ''; fecharModal(); LEITOR.fechar(true); location.hash = ''; entrar(); });
+});
+
+/* ═══════════ LEITOR (as páginas uma embaixo da outra, com zoom) ═══════════ */
+var LEITOR = (function () {
+  var rol = $('l-rolagem'), cx = $('l-paginas'), id = null, atual = 1, zoom = false, obs = null, salvarT = 0, rolando = false;
+  function altura() { var p = cx.firstElementChild; return p ? p.getBoundingClientRect().height + 8 : 1; }
+  function montar(novo) {
+    if (id === novo) return;
+    id = novo; var L = LIVROS[id], h = '';
+    for (var i = 1; i <= L.paginas; i++) h += '<div class="pg-l" data-p="' + i + '"><img alt="Page ' + i + '" decoding="async"><span class="num">' + i + '</span></div>';
+    cx.innerHTML = h;
+    if (obs) obs.disconnect();
+    obs = new IntersectionObserver(function (es) {
+      es.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        var im = en.target.querySelector('img');
+        if (!im.src) { im.onload = function () { im.classList.add('ok'); }; im.src = L.pasta + 'pag-' + ('00' + en.target.getAttribute('data-p')).slice(-3) + '.webp'; }
+        obs.unobserve(en.target);
+      });
+    }, { root: rol, rootMargin: '1600px 0px' });
+    [].forEach.call(cx.children, function (el) { obs.observe(el); });
+  }
+  function irPara(p) { atual = Math.max(1, Math.min(LIVROS[id].paginas, p)); rol.scrollTop = (atual - 1) * altura(); pintar(); }
+  function pintar() {
+    var r = rotulo(id, atual);
+    $('l-titulo').textContent = r.t; $('l-pag').textContent = r.s;
+    atualizarFav();
+    clearTimeout(salvarT);
+    salvarT = setTimeout(function () { guardar(chave('pag:' + id), String(atual)); }, 400);
+  }
+  function atualizarFav() {
+    if (!id) return;
+    var e = id === 'guide' ? estiloDaPagina(atual) : null, b = $('l-fav');
+    b.hidden = !e; if (!e) return;
+    var on = FAV.tem(e.n); b.classList.toggle('on', on); b.setAttribute('aria-pressed', String(on));
+    b.setAttribute('data-n', e.n); b.setAttribute('aria-label', on ? 'Remove style ' + e.n + ' from favorites' : 'Save style ' + e.n + ' to favorites');
+  }
+  rol.addEventListener('scroll', function () {
+    if (rolando) return; rolando = true;
+    requestAnimationFrame(function () {
+      rolando = false; if (!id) return;
+      var p = Math.floor((rol.scrollTop + rol.clientHeight * 0.3) / altura()) + 1;
+      p = Math.max(1, Math.min(LIVROS[id].paginas, p));
+      if (p !== atual) { atual = p; pintar(); }
+    });
+  }, { passive: true });
+  function alternarZoom(x) {
+    var frac = (rol.scrollTop / altura()) - (atual - 1);
+    zoom = !zoom;
+    cx.classList.toggle('z', zoom); rol.classList.toggle('z', zoom);
+    $('l-zoom').classList.toggle('on', zoom); $('l-zoom').setAttribute('aria-pressed', String(zoom));
+    rol.scrollTop = (atual - 1 + Math.max(0, frac)) * altura();
+    if (zoom) rol.scrollLeft = x == null ? (cx.scrollWidth - rol.clientWidth) / 2 : Math.max(0, x / rol.clientWidth * cx.scrollWidth - rol.clientWidth / 2);
+  }
+  // toque duplo (celular) ou duplo clique (computador) amplia no ponto tocado
+  var ultimo = { t: 0, x: 0, y: 0 };
+  cx.addEventListener('pointerup', function (e) {
+    if (e.pointerType === 'mouse') return;
+    var t = Date.now();
+    if (t - ultimo.t < 320 && Math.abs(e.clientX - ultimo.x) < 30 && Math.abs(e.clientY - ultimo.y) < 30) { ultimo.t = 0; alternarZoom(e.clientX); }
+    else ultimo = { t: t, x: e.clientX, y: e.clientY };
+  });
+  cx.addEventListener('dblclick', function (e) { alternarZoom(e.clientX); });
+  $('l-zoom').addEventListener('click', function () { alternarZoom(null); });
+  $('l-fav').addEventListener('click', function () { var n = this.getAttribute('data-n'); if (!n) return; FAV.alterna(n); atualizarFav(); });
+  $('l-pdf').addEventListener('click', function () { modalPdf(id); });
+  $('l-indice').addEventListener('click', function () { GAVETA.abrir(id, atual); });
+  $('l-voltar').addEventListener('click', function () { fechar(); });
+  function abrir(novo, p) {
+    if (!LIVROS[novo] || !libera(novo)) { location.hash = novo === 'guide' ? '#guide' : '#home'; return; }
+    var trocou = id !== novo;
+    montar(novo);
+    $('v-leitor').hidden = false; document.body.style.overflow = 'hidden';
+    if (zoom) alternarZoom(null);
+    var alvo = p || paginaSalva(novo) || 1;
+    if (trocou || alvo !== atual) requestAnimationFrame(function () { irPara(alvo); });
+    else pintar();
+    var d = $('l-dica'); d.style.opacity = '1'; setTimeout(function () { d.style.opacity = '0'; }, 2600);
+  }
+  function fechar(semRota) {
+    if ($('v-leitor').hidden) return;
+    $('v-leitor').hidden = true; document.body.style.overflow = ''; GAVETA.fechar();
+    if (semRota) return;
+    var volta = id === 'guide' ? '#guide' : '#bonus/' + id.slice(1);
+    if (VEIO_DE_DENTRO) history.back(); else location.hash = volta;
+  }
+  return { abrir: abrir, fechar: fechar, irPara: irPara, atualizarFav: atualizarFav, aberto: function () { return !$('v-leitor').hidden; }, id: function () { return id; } };
+})();
+
+/* ═══════════ GAVETA: índice do leitor ═══════════ */
+var GAVETA = (function () {
+  var livro = null, pagina = 1;
+  function item(p, nn, nome, extra, n) {
+    return '<button class="g-item" type="button" data-ir="' + p + '"><span class="nn">' + nn + '</span><span class="nome">' + esc(nome) + (n && FAV.tem(n) ? ' <svg class="fav-mini" aria-label="favorite"><use href="#i-estrela"/></svg>' : '') + '</span><small>' + extra + '</small></button>';
+  }
+  function corpo() {
+    var q = $('g-busca').value, h = '';
+    if (livro !== 'guide') {
+      var L = LIVROS[livro];
+      return (L.indice && L.indice.length ? L.indice : Array.from({ length: L.paginas }, function (_, i) { return { p: i + 1, t: 'Page ' + (i + 1) }; }))
+        .map(function (x) { return item(x.p, x.p, x.t, 'p. ' + x.p); }).join('');
+    }
+    var old = BUSCA; BUSCA = q;
+    var ini = BM.inicio.filter(function (x) { return bate(x.t + ' ' + x.k); }).map(function (x) { return item(x.p, x.p, x.t, 'p. ' + x.p); });
+    var prep = BM.prep.filter(function (x) { return bate(x.t + ' ' + x.k + ' ' + x.d); }).map(function (x) { return item(x.p, x.p, x.t, 'p. ' + x.p); });
+    if (ini.length) h += '<div class="g-tit">Start here</div>' + ini.join('');
+    if (prep.length) h += '<div class="g-tit">Preparation</div>' + prep.join('');
+    [1, 2, 3].forEach(function (nv) {
+      var l = BM.estilos.filter(function (e) { return e.nivel === nv && bate(e.n + ' ' + e.nome + ' ' + e.k); });
+      if (l.length) h += '<div class="g-tit">Level ' + nv + (nv === 1 ? ' · Start here' : nv === 2 ? ' · Intermediate' : ' · Advanced') + '</div>' + l.map(function (e) { return item(e.p, e.n, e.nome, e.horas + ' h', e.n); }).join('');
+    });
+    BUSCA = old;
+    return h || '<div class="vazio" style="margin:14px">Nothing found.</div>';
+  }
+  function marcarAtual() {
+    var bs = $('g-corpo').querySelectorAll('[data-ir]'), melhor = null;
+    [].forEach.call(bs, function (b) { b.classList.remove('atual'); var p = +b.getAttribute('data-ir'); if (p <= pagina && (!melhor || p >= +melhor.getAttribute('data-ir'))) melhor = b; });
+    if (melhor) { melhor.classList.add('atual'); melhor.scrollIntoView({ block: 'center' }); }
+  }
+  function abrir(id, p) {
+    livro = id; pagina = p;
+    $('g-titulo').textContent = id === 'guide' ? 'Contents' : 'Bonus ' + id.slice(1);
+    $('g-busca-caixa').hidden = id !== 'guide';
+    $('g-busca').value = '';
+    $('g-corpo').innerHTML = corpo();
+    $('gaveta').hidden = false; $('gaveta-fundo').hidden = false;
+    marcarAtual();
+  }
+  function fechar() { $('gaveta').hidden = true; $('gaveta-fundo').hidden = true; }
+  $('g-busca').addEventListener('input', function () { $('g-corpo').innerHTML = corpo(); });
+  $('g-corpo').addEventListener('click', function (e) { var b = e.target.closest('[data-ir]'); if (!b) return; fechar(); LEITOR.irPara(+b.getAttribute('data-ir')); });
+  $('g-fechar').addEventListener('click', fechar);
+  $('gaveta-fundo').addEventListener('click', fechar);
+  return { abrir: abrir, fechar: fechar };
+})();
+document.addEventListener('keydown', function (e) {
+  if (e.key !== 'Escape') return;
+  if (!$('modal').hidden) return fecharModal();
+  if (!$('gaveta').hidden) return GAVETA.fechar();
+  if (LEITOR.aberto()) LEITOR.fechar();
+});
+
+/* ═══════════ NAVEGAÇÃO (hash) ═══════════
+   #home · #home/bonuses · #guide · #support · #support/faq-print · #app · #bonus/N · #read/guide/P · #read/bN/P */
+var TELA = 'home', VEIO_DE_DENTRO = false, ULTIMO_HASH = '';
+function irTela(t) {
+  TELA = t;
+  ['home', 'guide', 'bonuses', 'support', 'app', 'bonus'].forEach(function (x) { $('t-' + x).hidden = x !== t; });
+  [].forEach.call(document.querySelectorAll('[data-aba]'), function (a) { var on = a.getAttribute('data-aba') === (t === 'bonus' ? 'bonuses' : t); a.classList.toggle('on', on); if (on) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
+}
+function rota() {
+  if (!EMAIL) return;
+  var h = location.hash.replace(/^#\/?/, ''), p = h.split('/');
+  VEIO_DE_DENTRO = !!ULTIMO_HASH && ULTIMO_HASH.indexOf('#read/') !== 0;
+  var antes = ULTIMO_HASH; ULTIMO_HASH = location.hash;
+  if (p[0] === 'read') {
+    if (p[1] !== 'guide' && TELA !== 'bonus') { desenharBonus(+String(p[1]).slice(1)); irTela('bonus'); }
+    else if (p[1] === 'guide' && TELA !== 'guide') { desenharGuia(); irTela('guide'); }
+    LEITOR.abrir(p[1], parseInt(p[2], 10) || 0); return;
+  }
+  LEITOR.fechar(true); fecharModal();
+  var TELA_ANTES = TELA;
+  var tela = ({ home: 'home', guide: 'guide', bonuses: 'bonuses', support: 'support', app: 'app', bonus: 'bonus' })[p[0]] || 'home';
+  if (tela === 'home') desenharHome();
+  if (tela === 'guide') { if (FILTROS.some(function (f) { return f[0] === p[1]; })) FILTRO = p[1]; desenharGuia(); }
+  if (tela === 'app') desenharApp();
+  if (tela === 'bonuses') desenharBonuses();
+  if (tela === 'bonus') desenharBonus(parseInt(p[1], 10));
+  irTela(tela);
+  var alvo = p[1] && document.getElementById(p[1]);
+  if (alvo) { if (alvo.tagName === 'DETAILS') alvo.open = true; setTimeout(function () { var y = alvo.getBoundingClientRect().top + window.pageYOffset - 70; window.scrollTo({ top: y, behavior: 'smooth' }); }, 60); }
+  else if (antes.indexOf('#read/') !== 0 || tela !== TELA_ANTES) window.scrollTo(0, 0);
+}
+window.addEventListener('hashchange', rota);
+
+/* ═══════════ ENTRAR ═══════════ */
+function entrar() {
+  if (!EMAIL) { mostrar('v-login'); setTimeout(function () { $('email').focus(); }, 50); return; }
+  $('btn-conta').textContent = (EMAIL[0] || 'B').toUpperCase();
+  mostrar('v-app');
+  ULTIMO_HASH = '';
+  rota();
+}
+$('form-login').addEventListener('submit', function (e) {
+  e.preventDefault();
+  var em = $('email').value.trim().toLowerCase(), erro = $('erro-login');
+  if (!emailValido(em)) { erro.textContent = 'Please enter a valid email, like name@example.com.'; erro.hidden = false; return; }
+  erro.hidden = true;
+  // QUALQUER e-mail válido entra (sem checar compra). Ver REGRA_PLANO no topo para o futuro.
+  EMAIL = em; guardar('bm:email', em);
+  if (!location.hash || location.hash === '#') location.hash = '#home';
+  entrar();
+});
+if ('serviceWorker' in navigator) window.addEventListener('load', function () { navigator.serviceWorker.register('/sw.js').catch(function () {}); });
+entrar();
+</script>
+</body>
+</html>
